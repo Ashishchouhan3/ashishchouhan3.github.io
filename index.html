@@ -27,11 +27,12 @@ nav{
 position:fixed;
 width:100%;
 top:0;
-background:rgba(248,247,244,.85);
+background:rgba(248,247,244,.9);
 backdrop-filter:blur(10px);
-padding:25px 10%;
+padding:22px 10%;
 display:flex;
 justify-content:space-between;
+align-items:center;
 z-index:1000;
 border-bottom:1px solid rgba(0,0,0,0.05);
 }
@@ -40,15 +41,68 @@ nav a{
 margin-left:25px;
 text-decoration:none;
 color:#444;
-font-size:14px;
+font-size:13px;
 letter-spacing:.5px;
 }
 
-nav a:hover{
-opacity:.6;
+nav a:hover{opacity:.6}
+
+/* MINI PROFILE */
+
+.profile-mini{
+display:flex;
+align-items:center;
+gap:12px;
+cursor:pointer;
+position:relative;
 }
 
-/* HERO */
+.avatar{
+width:36px;
+height:36px;
+border-radius:50%;
+background:#1c1c1c;
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:13px;
+font-weight:500;
+}
+
+.profile-card{
+position:absolute;
+top:55px;
+right:0;
+background:white;
+padding:18px 22px;
+border-radius:10px;
+box-shadow:0 20px 40px rgba(0,0,0,0.08);
+width:220px;
+opacity:0;
+pointer-events:none;
+transition:.3s;
+}
+
+.profile-mini:hover .profile-card{
+opacity:1;
+pointer-events:auto;
+}
+
+.profile-card strong{
+display:block;
+font-size:14px;
+margin-bottom:6px;
+}
+
+.profile-card span{
+display:block;
+font-size:12px;
+color:#666;
+margin-bottom:4px;
+}
+
+/* SECTIONS */
 
 section{
 min-height:100vh;
@@ -81,17 +135,16 @@ border-radius:40px;
 border:1px solid #1c1c1c;
 text-decoration:none;
 color:#1c1c1c;
-font-size:14px;
+font-size:13px;
 letter-spacing:.5px;
 transition:.3s;
+width:fit-content;
 }
 
 .btn:hover{
 background:#1c1c1c;
 color:white;
 }
-
-/* SECTION HEADINGS */
 
 h2{
 font-family:'Playfair Display',serif;
@@ -126,13 +179,14 @@ box-shadow:0 30px 60px rgba(0,0,0,0.08);
 footer{
 padding:80px 12%;
 text-align:center;
-font-size:14px;
+font-size:13px;
 color:#777;
 border-top:1px solid rgba(0,0,0,0.05);
 }
 
 @media(max-width:768px){
 .hero h1{font-size:42px;}
+nav{flex-direction:column;gap:10px;}
 }
 
 </style>
@@ -142,17 +196,30 @@ border-top:1px solid rgba(0,0,0,0.05);
 
 <nav>
 <div><strong>Ashish Chouhan</strong></div>
-<div>
+
+<div style="display:flex;align-items:center;gap:25px;">
 <a href="#about">About</a>
 <a href="#research">Research</a>
 <a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
+
+<div class="profile-mini">
+<div class="avatar">AC</div>
+
+<div class="profile-card">
+<strong>Ashish Chouhan</strong>
+<span>Climate–Agriculture Researcher</span>
+<span>Institution: Independent / University</span>
+<span>your@email.com</span>
+</div>
+
+</div>
 </div>
 </nav>
 
 <section class="hero">
 <h1>
-Climate Risk, Agricultural Productivity,
+Climate Risk, Agricultural Productivity,<br>
 and Long-Run Adaptation.
 </h1>
 <p>
