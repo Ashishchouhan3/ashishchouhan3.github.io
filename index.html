@@ -26,9 +26,11 @@ content:"";
 position:fixed;
 top:0;left:0;width:100%;height:100%;
 background:url("https://www.transparenttextures.com/patterns/paper-fibers.png");
-opacity:.15;
+opacity:.12;
 pointer-events:none;
 }
+
+/* NAV */
 
 nav{
 position:fixed;
@@ -49,6 +51,8 @@ letter-spacing:.2em;
 color:#555;
 }
 
+/* SECTIONS */
+
 section{
 min-height:100vh;
 padding:180px 12% 120px;
@@ -61,7 +65,7 @@ justify-content:center;
 
 .hero h1{
 font-family:'Playfair Display',serif;
-font-size:74px;
+font-size:72px;
 max-width:900px;
 line-height:1.05;
 }
@@ -77,20 +81,9 @@ max-width:520px;
 color:#555;
 }
 
-/* editorial divider */
+/* divider */
 .line{
 width:60px;height:1px;background:#b7a46b;margin:60px 0;
-}
-
-.btn{
-margin-top:40px;
-border:1px solid #1c1c1c;
-padding:14px 40px;
-text-decoration:none;
-font-size:12px;
-letter-spacing:.3em;
-color:#1c1c1c;
-width:fit-content;
 }
 
 h2{
@@ -117,14 +110,54 @@ transition:.6s;
 
 .card:hover{transform:translateY(-12px)}
 
+/* QUOTE */
+
 .quote{
 font-family:'Playfair Display',serif;
-font-size:28px;
-max-width:600px;
-margin:120px auto;
+font-size:26px;
+max-width:650px;
+margin:140px auto;
 text-align:center;
 color:#444;
 }
+
+.quote span{
+display:block;
+margin-top:15px;
+font-size:13px;
+letter-spacing:.15em;
+color:#777;
+}
+
+/* RECENT WORK */
+
+.work-item{
+border-top:1px solid rgba(0,0,0,.08);
+padding:25px 0;
+cursor:pointer;
+}
+
+.work-title{
+font-size:18px;
+font-weight:400;
+letter-spacing:.02em;
+}
+
+.work-abstract{
+max-height:0;
+overflow:hidden;
+transition:max-height .6s ease;
+color:#555;
+font-size:15px;
+margin-top:15px;
+line-height:1.6;
+}
+
+.work-item.active .work-abstract{
+max-height:300px;
+}
+
+/* FOOTER */
 
 footer{
 padding:120px 12%;
@@ -149,6 +182,7 @@ color:#777;
 <a href="#about">ABOUT</a>
 <a href="#research">RESEARCH</a>
 <a href="#projects">PROJECTS</a>
+<a href="#recent">RECENT</a>
 <a href="#contact">CONTACT</a>
 </div>
 </nav>
@@ -165,8 +199,6 @@ and <span>Human Adaptation</span>.
 <p>
 Applied climate–agriculture research using high-resolution data and econometric methods in India.
 </p>
-
-<a href="#research" class="btn">ENTER</a>
 </section>
 
 <section id="about">
@@ -177,7 +209,8 @@ I study how climate variability and extremes affect agricultural outcomes across
 </section>
 
 <div class="quote">
-“Climate change is not a future risk — it is a present economic reality.”
+“Climate change is already reshaping agricultural productivity — adaptation determines how costly that reshaping will be.”
+<span>— David Lobell</span>
 </div>
 
 <section id="research">
@@ -199,6 +232,32 @@ I study how climate variability and extremes affect agricultural outcomes across
 </div>
 </section>
 
+<section id="recent">
+<h2>Recent Work</h2>
+
+<div class="work-item">
+<div class="work-title">Climate Shocks and Maize Yields in India</div>
+<div class="work-abstract">
+This paper estimates nonlinear temperature and rainfall impacts on district-level maize yields using ERA5 and IMD data from 1951–2020. I construct temperature exposure bins and extreme precipitation indices to quantify productivity losses and examine irrigation-mediated adaptation.
+</div>
+</div>
+
+<div class="work-item">
+<div class="work-title">Extreme Rainfall, Dry Spells, and Paddy Productivity</div>
+<div class="work-abstract">
+Using panel fixed effects models, this study links consecutive dry days and heavy rainfall events to paddy yields. Results highlight asymmetric impacts across growth stages and the buffering role of irrigation infrastructure.
+</div>
+</div>
+
+<div class="work-item">
+<div class="work-title">Adaptation Through Irrigation</div>
+<div class="work-abstract">
+This project evaluates whether irrigation moderates climate damages by interacting temperature exposure with district irrigation intensity, providing evidence on technological adaptation under rising heat stress.
+</div>
+</div>
+
+</section>
+
 <section id="contact">
 <h2>Contact</h2>
 <p>
@@ -213,6 +272,13 @@ ASHISH CHOUHAN — CLIMATE & AGRICULTURE
 
 <script>
 gsap.from(".hero h1",{opacity:0,y:40,duration:1});
+
+/* recent work toggle */
+document.querySelectorAll(".work-item").forEach(item=>{
+item.addEventListener("click",()=>{
+item.classList.toggle("active");
+});
+});
 </script>
 
 </body>
