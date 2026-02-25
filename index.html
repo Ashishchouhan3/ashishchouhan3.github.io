@@ -5,133 +5,143 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ashish Chouhan | Climate & Agriculture Research</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
+
 <style>
 
-/* ===== Global ===== */
+/* ===== GLOBAL ===== */
+* {margin:0;padding:0;box-sizing:border-box;}
+
+html {scroll-behavior:smooth;}
+
 body {
-  margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: #f4f7fb;
-  color: #333;
-  line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right,#0f172a,#1e293b);
+  color: white;
+  overflow-x:hidden;
 }
 
-a {
-  color: #1d4ed8;
-  text-decoration: none;
+section {
+  padding:100px 10%;
+  position:relative;
 }
 
-.container {
-  max-width: 1000px;
-  margin: auto;
-  padding: 40px 20px;
+h1,h2,h3 {
+  font-weight:600;
 }
 
-/* ===== Navigation ===== */
+/* ===== NAVBAR ===== */
 nav {
-  background: #0f172a;
-  padding: 15px 0;
-}
-
-nav .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
+  position:fixed;
+  width:100%;
+  top:0;
+  backdrop-filter: blur(10px);
+  background: rgba(15,23,42,0.7);
+  display:flex;
+  justify-content:space-between;
+  padding:20px 10%;
+  z-index:1000;
 }
 
 nav a {
-  color: white;
-  margin-left: 20px;
-  font-size: 14px;
-  letter-spacing: 0.5px;
+  color:white;
+  margin-left:25px;
+  text-decoration:none;
+  font-weight:500;
+  transition:0.3s;
 }
 
-/* ===== Header ===== */
-header {
-  background: linear-gradient(135deg,#2563eb,#16a34a);
-  color: white;
-  padding: 90px 20px;
-  text-align: center;
+nav a:hover {
+  color:#38bdf8;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 42px;
-  font-weight: 600;
+/* ===== HERO ===== */
+.hero {
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
 }
 
-header p {
-  font-size: 18px;
-  opacity: 0.95;
-  margin-top: 15px;
+.hero h1 {
+  font-size:64px;
+  background: linear-gradient(to right,#38bdf8,#22c55e);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 
-/* ===== Sections ===== */
-section {
-  margin-top: 70px;
+.hero p {
+  font-size:22px;
+  margin-top:20px;
+  max-width:600px;
+  color:#cbd5e1;
 }
 
-h2 {
-  font-size: 26px;
-  border-left: 6px solid #2563eb;
-  padding-left: 12px;
-  margin-bottom: 25px;
-}
-
-/* ===== Cards ===== */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
-  gap: 25px;
-}
-
-.card {
-  background: white;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-  transition: all .2s ease;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
-}
-
-/* ===== Buttons ===== */
 .btn {
-  display: inline-block;
-  background: #1d4ed8;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 8px;
-  margin-top: 15px;
-  font-size: 14px;
+  display:inline-block;
+  margin-top:40px;
+  padding:14px 28px;
+  background:linear-gradient(to right,#38bdf8,#22c55e);
+  border-radius:40px;
+  color:black;
+  font-weight:600;
+  text-decoration:none;
+  transition:0.3s;
 }
 
 .btn:hover {
-  background: #1e40af;
+  transform:scale(1.05);
 }
 
-/* ===== Footer ===== */
+/* ===== GLASS CARDS ===== */
+.glass {
+  background: rgba(255,255,255,0.08);
+  border-radius:20px;
+  padding:40px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  transition:0.4s;
+}
+
+.glass:hover {
+  transform:translateY(-10px);
+}
+
+.grid {
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+  margin-top:60px;
+}
+
+h2 {
+  font-size:40px;
+  margin-bottom:20px;
+}
+
+/* ===== ANIMATION ===== */
+.reveal {
+  opacity:0;
+  transform:translateY(60px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* ===== FOOTER ===== */
 footer {
-  margin-top: 80px;
-  padding: 40px 20px;
-  background: #0f172a;
-  color: white;
-  text-align: center;
-  font-size: 14px;
+  text-align:center;
+  padding:40px;
+  background:#020617;
+  color:#94a3b8;
 }
 
-/* ===== Responsive ===== */
-@media(max-width:700px){
-  nav .container {
-    flex-direction: column;
-  }
-  nav a {
-    margin: 10px 0 0 0;
-  }
+@media(max-width:768px){
+  .hero h1 {font-size:40px;}
+  nav {flex-direction:column;}
 }
 
 </style>
@@ -139,81 +149,87 @@ footer {
 
 <body>
 
-<!-- Navigation -->
 <nav>
-  <div class="container">
-    <div><strong>Ashish Chouhan</strong></div>
-    <div>
-      <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </div>
+  <div><strong>Ashish Chouhan</strong></div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
   </div>
 </nav>
 
-<!-- Header -->
-<header>
-  <h1>Ashish Chouhan</h1>
+<section class="hero">
+  <h1>Understanding Climate. Transforming Agriculture.</h1>
   <p>
-    Climate–Agriculture Researcher | India<br>
-    Climate Impacts · Agricultural Productivity · Adaptation
+  I analyze how climate variability and extreme weather affect agricultural productivity in India, combining high-resolution climate data and econometric modeling.
   </p>
-  <a class="btn" href="#">Download CV</a>
-</header>
-
-<div class="container">
-
-<section id="about">
-<h2>About Me</h2>
-<p>
-I study the impact of climate variability and extreme weather events on agricultural productivity in India. 
-My work integrates high-resolution climate datasets (ERA5, IMD) with district-level yield data and panel econometric methods to quantify nonlinear temperature and rainfall effects, as well as adaptation mechanisms.
-</p>
+  <a href="#research" class="btn">Explore My Work</a>
 </section>
 
-<section id="research">
-<h2>Research Interests</h2>
-<div class="grid">
-  <div class="card">🌡 Nonlinear temperature exposure & crop yields</div>
-  <div class="card">🌧 Rainfall extremes & dry spell metrics</div>
-  <div class="card">🚜 Agricultural adaptation & technology adoption</div>
-  <div class="card">💧 Irrigation and water sustainability</div>
-  <div class="card">📊 Panel econometrics & causal inference</div>
-</div>
-</section>
-
-<section id="projects">
-<h2>Current Projects</h2>
-<div class="grid">
-  <div class="card">
-    <strong>Climate Shocks</strong><br><br>
-    Estimating nonlinear temperature bin effects and extreme rainfall impacts on maize and paddy yields across Indian districts.
+<section id="about" class="reveal">
+  <h2>About Me</h2>
+  <div class="glass">
+    I work at the intersection of climate science and agricultural economics.
+    My research quantifies nonlinear temperature exposure, rainfall extremes,
+    and adaptation mechanisms using district-level panel data and high-resolution datasets (ERA5, IMD).
   </div>
-  <div class="card">
-    <strong>Adaptation Mechanisms</strong><br><br>
-    Assessing how irrigation and input use mitigate climate-induced productivity losses.
-  </div>
-  <div class="card">
-    <strong>Climate Data Construction</strong><br><br>
-    Building district-level exposure metrics from ERA5 and IMD datasets (1951–2020).
-  </div>
-</div>
 </section>
 
-<section id="contact">
-<h2>Contact</h2>
-<p>
-Email: your@email.com<br>
-GitHub: https://github.com/ashishchouhan3
-</p>
+<section id="research" class="reveal">
+  <h2>Research Interests</h2>
+  <div class="grid">
+    <div class="glass">🌡 Nonlinear temperature exposure</div>
+    <div class="glass">🌧 Extreme rainfall & dry spells</div>
+    <div class="glass">🚜 Adaptation & irrigation</div>
+    <div class="glass">📊 Panel econometrics</div>
+  </div>
 </section>
 
-</div>
+<section id="projects" class="reveal">
+  <h2>Current Projects</h2>
+  <div class="grid">
+    <div class="glass">
+      <h3>Climate Shocks</h3>
+      Estimating bin-level temperature and rainfall impacts on maize & paddy yields.
+    </div>
+    <div class="glass">
+      <h3>Adaptation</h3>
+      Measuring mitigation effects of irrigation and input use.
+    </div>
+    <div class="glass">
+      <h3>Data Systems</h3>
+      Constructing district exposure metrics (1951–2020).
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="reveal">
+  <h2>Contact</h2>
+  <div class="glass">
+    Email: your@email.com<br>
+    GitHub: https://github.com/ashishchouhan3
+  </div>
+</section>
 
 <footer>
 © 2026 Ashish Chouhan
 </footer>
+
+<script>
+function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 100;
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    }
+  }
+}
+window.addEventListener("scroll", reveal);
+</script>
 
 </body>
 </html>
