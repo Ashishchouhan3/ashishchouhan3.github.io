@@ -1,1 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ashish Chouhan | Climate & Agriculture Research</title>
 
+<style>
+
+/* ===== Global ===== */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f7fb;
+  color: #333;
+}
+
+a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* ===== Header ===== */
+header {
+  background: linear-gradient(135deg,#2563eb,#16a34a);
+  color: white;
+  padding: 80px 20px;
+}
+
+.hero {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero img {
+  width: 180px;
+  border-radius: 50%;
+  border: 5px solid white;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 40px;
+}
+
+.hero p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* ===== Sections ===== */
+
+section {
+  margin-top: 60px;
+}
+
+h2 {
+  font-size: 28px;
+  border-left: 6px solid #2563eb;
+  padding-left: 12px;
+}
+
+/* ===== Cards ===== */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform .2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== Footer ===== */
+
+footer {
+  margin-top: 80px;
+  padding: 30px;
+  background: #0f172a;
+  color: white;
+  text-align: center;
+}
+
+/* ===== Buttons ===== */
+
+.btn {
+  display: inline-block;
+  background: #2563eb;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* ===== Responsive ===== */
+
+@media(max-width:700px){
+.hero{flex-direction:column;text-align:center;}
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container hero">
+
+<img src="profile.jpg">
+
+<div>
+<h1>Ashish Chouhan</h1>
+<p>
+Climate–Agriculture Researcher<br>
+India<br>
+Email: your@email.com
+</p>
+
+<a class="btn" href="cv.pdf">Download CV</a>
+</div>
+
+</div>
+</header>
+
+<div class="container">
+
+<section>
+<h2>About Me</h2>
+
+<p>
+I study how climate variability and extremes affect agricultural productivity in India.
+My research combines high-resolution climate data (ERA5, IMD), district-level yields,
+and panel econometric methods to quantify impacts and adaptation mechanisms.
+</p>
+</section>
+
+<section>
+<h2>Research Interests</h2>
+
+<div class="grid">
+
+<div class="card">🌡 Temperature exposure and crop yields</div>
+<div class="card">🌧 Rainfall extremes & dry spells</div>
+<div class="card">🚜 Agricultural adaptation</div>
+<div class="card">💧 Irrigation & water sustainability</div>
+<div class="card">📊 Panel econometrics</div>
+
+</div>
+</section>
+
+<section>
+<h2>Current Projects</h2>
+
+<div class="grid">
+
+<div class="card">
+<b>Climate Shocks</b><br><br>
+Nonlinear temperature bins and extreme rainfall impacts on maize and paddy.
+</div>
+
+<div class="card">
+<b>Adaptation</b><br><br>
+Role of irrigation and technology in moderating climate damages.
+</div>
+
+<div class="card">
+<b>Data Construction</b><br><br>
+District-level exposure metrics from ERA5 + IMD (1951–2020).
+</div>
+
+</div>
+</section>
+
+<section>
+<h2>Data & Code</h2>
+
+<p>
+All replication files and datasets:
+</p>
+
+<a class="btn" href="https://github.com/yourusername">GitHub Profile</a>
+
+</section>
+
+<section>
+<h2>Contact</h2>
+
+<p>
+Email: your@email.com<br>
+GitHub: github.com/yourusername
+</p>
+
+</section>
+
+</div>
+
+<footer>
+© 2026 Ashish Chouhan
+</footer>
+
+</body>
+</html>
