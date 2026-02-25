@@ -89,14 +89,34 @@ gap:60px;
 margin-top:60px;
 }
 
+/* Luxury cards */
+
 .card{
-background:white;
-padding:45px;
-box-shadow:0 25px 60px rgba(0,0,0,.05);
-transition:.5s;
+background:linear-gradient(180deg,#ffffff,#fafafa);
+padding:48px;
+border-radius:12px;
+border:1px solid rgba(0,0,0,.04);
+box-shadow:
+0 10px 25px rgba(0,0,0,.04),
+0 30px 60px rgba(0,0,0,.03);
+transition:all .6s cubic-bezier(.2,.8,.2,1);
 }
 
-.card:hover{transform:translateY(-10px)}
+.card:hover{
+transform:translateY(-8px);
+box-shadow:
+0 20px 40px rgba(0,0,0,.06),
+0 40px 80px rgba(0,0,0,.05);
+}
+
+.card strong{
+display:block;
+font-size:18px;
+margin-bottom:8px;
+letter-spacing:.02em;
+}
+
+/* Quote */
 
 .quote{
 font-family:'Playfair Display',serif;
@@ -114,6 +134,8 @@ font-size:13px;
 letter-spacing:.15em;
 color:#777;
 }
+
+/* Working papers */
 
 .work-item{
 border-top:1px solid rgba(0,0,0,.08);
@@ -173,9 +195,9 @@ color:#777;
 
 <section class="hero">
 <h1>
-Agricultural Risk,<br>
-Climate Exposure,<br>
-and <span>Farmer Adaptation</span>.
+Climate Risk,<br>
+Farmer Behavior,<br>
+and <span>Welfare Impacts</span>.
 </h1>
 
 <div class="line"></div>
@@ -193,11 +215,11 @@ My research examines how farmers respond to increasing climate risk, and whether
 </p>
 
 <p>
-I have conducted primary field surveys covering approximately 400 farmers for my thesis work, which form the basis for empirical analysis of insurance adoption and climate adaptation outcomes. My applied work draws on impact evaluation frameworks alongside panel econometric methods.
+I conducted primary field surveys covering approximately 400 farmers for my thesis work, forming the basis for empirical analysis of insurance adoption and climate adaptation outcomes. My applied work draws on impact evaluation frameworks alongside panel econometric methods.
 </p>
 
 <div class="tools">
-<strong>Methods & Tools:</strong> Dynamic panel models, DKSE, MMQR, impact evaluation methods • Stata, R • Learning Python
+<strong>Methods & Tools:</strong> Dynamic panel models, DKSE, MMQR, impact evaluation • Stata, R • Learning Python
 </div>
 
 </section>
@@ -213,22 +235,22 @@ I have conducted primary field surveys covering approximately 400 farmers for my
 <div class="grid">
 
 <div class="card">
-<strong>Agricultural Risk & Crop Insurance</strong><br><br>
+<strong>Agricultural Risk & Crop Insurance</strong>
 Adoption behavior, moral hazard, and welfare implications of insurance participation under climate uncertainty.
 </div>
 
 <div class="card">
-<strong>Climate–Yield Modeling</strong><br><br>
+<strong>Climate–Yield Modeling</strong>
 Nonlinear temperature and rainfall exposure functions using ERA5 and IMD data with district-level yields.
 </div>
 
 <div class="card">
-<strong>Impact Evaluation</strong><br><br>
+<strong>Impact Evaluation</strong>
 Survey-based evaluation of institutional interventions and farmer outcomes using quasi-experimental approaches.
 </div>
 
 <div class="card">
-<strong>Applied Econometrics</strong><br><br>
+<strong>Applied Econometrics</strong>
 Dynamic panels, DKSE, MMQR, heterogeneous climate effects, and distribution-sensitive estimation.
 </div>
 
