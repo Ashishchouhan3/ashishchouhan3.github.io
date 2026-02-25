@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ashish Chouhan | Climate & Agriculture</title>
+<title>Ashish Chouhan | Agricultural Risk & Climate Economics</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
@@ -20,7 +20,6 @@ color:#1c1c1c;
 line-height:1.7;
 }
 
-/* subtle paper texture */
 body:before{
 content:"";
 position:fixed;
@@ -29,8 +28,6 @@ background:url("https://www.transparenttextures.com/patterns/paper-fibers.png");
 opacity:.12;
 pointer-events:none;
 }
-
-/* NAV */
 
 nav{
 position:fixed;
@@ -51,8 +48,6 @@ letter-spacing:.2em;
 color:#555;
 }
 
-/* SECTIONS */
-
 section{
 min-height:100vh;
 padding:180px 12% 120px;
@@ -61,56 +56,47 @@ flex-direction:column;
 justify-content:center;
 }
 
-/* HERO */
-
 .hero h1{
 font-family:'Playfair Display',serif;
-font-size:72px;
+font-size:70px;
 max-width:900px;
 line-height:1.05;
 }
 
-.hero span{
-color:#b7a46b;
-}
+.hero span{color:#b7a46b}
 
 .hero p{
 margin-top:40px;
 font-size:20px;
-max-width:520px;
+max-width:560px;
 color:#555;
 }
 
-/* divider */
 .line{
 width:60px;height:1px;background:#b7a46b;margin:60px 0;
 }
 
 h2{
 font-family:'Playfair Display',serif;
-font-size:46px;
+font-size:44px;
 margin-bottom:40px;
 }
-
-/* cards */
 
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:70px;
+gap:60px;
 margin-top:60px;
 }
 
 .card{
 background:white;
-padding:50px;
+padding:45px;
 box-shadow:0 25px 60px rgba(0,0,0,.05);
-transition:.6s;
+transition:.5s;
 }
 
-.card:hover{transform:translateY(-12px)}
-
-/* QUOTE */
+.card:hover{transform:translateY(-10px)}
 
 .quote{
 font-family:'Playfair Display',serif;
@@ -129,8 +115,6 @@ letter-spacing:.15em;
 color:#777;
 }
 
-/* RECENT WORK */
-
 .work-item{
 border-top:1px solid rgba(0,0,0,.08);
 padding:25px 0;
@@ -139,7 +123,6 @@ cursor:pointer;
 
 .work-title{
 font-size:18px;
-font-weight:400;
 letter-spacing:.02em;
 }
 
@@ -150,14 +133,15 @@ transition:max-height .6s ease;
 color:#555;
 font-size:15px;
 margin-top:15px;
-line-height:1.6;
 }
 
-.work-item.active .work-abstract{
-max-height:300px;
-}
+.work-item.active .work-abstract{max-height:400px}
 
-/* FOOTER */
+.tools{
+margin-top:30px;
+font-size:15px;
+color:#555;
+}
 
 footer{
 padding:120px 12%;
@@ -182,30 +166,40 @@ color:#777;
 <a href="#about">ABOUT</a>
 <a href="#research">RESEARCH</a>
 <a href="#projects">PROJECTS</a>
-<a href="#recent">RECENT</a>
+<a href="#working">WORKING PAPERS</a>
 <a href="#contact">CONTACT</a>
 </div>
 </nav>
 
 <section class="hero">
 <h1>
-Climate Risk,<br>
-Agricultural Productivity,<br>
-and <span>Human Adaptation</span>.
+Agricultural Risk,<br>
+Climate Exposure,<br>
+and <span>Farmer Adaptation</span>.
 </h1>
 
 <div class="line"></div>
 
 <p>
-Applied climate–agriculture research using high-resolution data and econometric methods in India.
+Applied research on crop insurance, climate–yield relationships, and farmer welfare using high-resolution climate data and micro-econometric methods in India.
 </p>
 </section>
 
 <section id="about">
 <h2>About</h2>
+
 <p>
-I study how climate variability and extremes affect agricultural outcomes across Indian districts. My work integrates ERA5 and IMD climate data with panel econometric models to quantify nonlinear temperature exposure, rainfall shocks, and adaptation mechanisms.
+My research examines how farmers respond to increasing climate risk, and whether institutional mechanisms such as crop insurance mitigate welfare losses. I combine district-level climate exposure modeling with primary survey data to study adoption behavior, productivity impacts, and income stability.
 </p>
+
+<p>
+I have conducted primary field surveys covering approximately 400 farmers for my thesis work, which form the basis for empirical analysis of insurance adoption and climate adaptation outcomes. My applied work draws on impact evaluation frameworks alongside panel econometric methods.
+</p>
+
+<div class="tools">
+<strong>Methods & Tools:</strong> Dynamic panel models, DKSE, MMQR, impact evaluation methods • Stata, R • Learning Python
+</div>
+
 </section>
 
 <div class="quote">
@@ -215,44 +209,73 @@ I study how climate variability and extremes affect agricultural outcomes across
 
 <section id="research">
 <h2>Research Areas</h2>
+
 <div class="grid">
-<div class="card">Nonlinear temperature damage functions</div>
-<div class="card">Extreme rainfall & dry spells</div>
-<div class="card">Irrigation as adaptation</div>
-<div class="card">Panel econometrics</div>
+
+<div class="card">
+<strong>Agricultural Risk & Crop Insurance</strong><br><br>
+Adoption behavior, moral hazard, and welfare implications of insurance participation under climate uncertainty.
+</div>
+
+<div class="card">
+<strong>Climate–Yield Modeling</strong><br><br>
+Nonlinear temperature and rainfall exposure functions using ERA5 and IMD data with district-level yields.
+</div>
+
+<div class="card">
+<strong>Impact Evaluation</strong><br><br>
+Survey-based evaluation of institutional interventions and farmer outcomes using quasi-experimental approaches.
+</div>
+
+<div class="card">
+<strong>Applied Econometrics</strong><br><br>
+Dynamic panels, DKSE, MMQR, heterogeneous climate effects, and distribution-sensitive estimation.
+</div>
+
 </div>
 </section>
 
 <section id="projects">
 <h2>Current Work</h2>
+
 <div class="grid">
-<div class="card">Maize and paddy yield responses to climate shocks</div>
-<div class="card">Adaptation through irrigation</div>
-<div class="card">District exposure systems (1951–2020)</div>
+
+<div class="card">
+Crop Insurance and Farmer Welfare: estimating impacts on yield variability and income stability.
+</div>
+
+<div class="card">
+Nonlinear Climate–Yield Relationships across Indian districts using MMQR.
+</div>
+
+<div class="card">
+Risk, Adoption, and Institutional Design under climate stress.
+</div>
+
 </div>
 </section>
 
-<section id="recent">
-<h2>Recent Work</h2>
+<section id="working">
+<h2>Working Papers</h2>
 
 <div class="work-item">
-<div class="work-title">Climate Shocks and Maize Yields in India</div>
+<div class="work-title">Crop Insurance Adoption and Farmer Welfare under Climate Risk</div>
 <div class="work-abstract">
-This paper estimates nonlinear temperature and rainfall impacts on district-level maize yields using ERA5 and IMD data from 1951–2020. I construct temperature exposure bins and extreme precipitation indices to quantify productivity losses and examine irrigation-mediated adaptation.
-</div>
-</div>
-
-<div class="work-item">
-<div class="work-title">Extreme Rainfall, Dry Spells, and Paddy Productivity</div>
-<div class="work-abstract">
-Using panel fixed effects models, this study links consecutive dry days and heavy rainfall events to paddy yields. Results highlight asymmetric impacts across growth stages and the buffering role of irrigation infrastructure.
+Using primary survey data from approximately 400 farmers combined with district climate exposure measures, this paper evaluates whether crop insurance participation stabilizes income and reduces yield volatility. Dynamic panel models estimate heterogeneous welfare impacts under varying climate stress.
 </div>
 </div>
 
 <div class="work-item">
-<div class="work-title">Adaptation Through Irrigation</div>
+<div class="work-title">Nonlinear Climate Impacts on Crop Yields in India</div>
 <div class="work-abstract">
-This project evaluates whether irrigation moderates climate damages by interacting temperature exposure with district irrigation intensity, providing evidence on technological adaptation under rising heat stress.
+This study estimates temperature and precipitation exposure functions using ERA5 and IMD datasets (1951–2020). MMQR and DKSE approaches reveal asymmetric yield responses under extreme heat and rainfall shocks.
+</div>
+</div>
+
+<div class="work-item">
+<div class="work-title">Climate Risk, Institutional Adoption, and Adaptation</div>
+<div class="work-abstract">
+This paper examines interactions between climate variability and institutional responses, testing whether insurance uptake moderates climate-induced productivity losses.
 </div>
 </div>
 
@@ -261,19 +284,20 @@ This project evaluates whether irrigation moderates climate damages by interacti
 <section id="contact">
 <h2>Contact</h2>
 <p>
-your@email.com<br>
-github.com/ashishchouhan3
+Ashish Chouhan<br>
+Agricultural Risk & Climate Economics<br><br>
+Email: your@email.com<br>
+GitHub: github.com/ashishchouhan3
 </p>
 </section>
 
 <footer>
-ASHISH CHOUHAN — CLIMATE & AGRICULTURE
+ASHISH CHOUHAN — AGRICULTURAL RISK & CLIMATE ECONOMICS
 </footer>
 
 <script>
 gsap.from(".hero h1",{opacity:0,y:40,duration:1});
 
-/* recent work toggle */
 document.querySelectorAll(".work-item").forEach(item=>{
 item.addEventListener("click",()=>{
 item.classList.toggle("active");
