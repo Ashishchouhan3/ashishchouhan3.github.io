@@ -5,188 +5,137 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ashish Chouhan | Climate & Agriculture</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
 <style>
 
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
 
 body{
-font-family:'Inter',sans-serif;
-background:#f8f7f4;
+font-family:Inter,sans-serif;
+background:#f6f5f2;
 color:#1c1c1c;
 line-height:1.7;
 }
 
-/* NAV */
+/* subtle paper texture */
+body:before{
+content:"";
+position:fixed;
+top:0;left:0;width:100%;height:100%;
+background:url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+opacity:.15;
+pointer-events:none;
+}
 
 nav{
 position:fixed;
-width:100%;
-top:0;
-background:rgba(248,247,244,.9);
-backdrop-filter:blur(10px);
-padding:22px 10%;
+top:0;width:100%;
+padding:28px 12%;
+background:rgba(246,245,242,.9);
 display:flex;
 justify-content:space-between;
-align-items:center;
-z-index:1000;
-border-bottom:1px solid rgba(0,0,0,0.05);
+border-bottom:1px solid rgba(0,0,0,.05);
+z-index:10;
 }
 
 nav a{
 margin-left:25px;
 text-decoration:none;
-color:#444;
-font-size:13px;
-letter-spacing:.5px;
-}
-
-nav a:hover{opacity:.6}
-
-/* MINI PROFILE */
-
-.profile-mini{
-display:flex;
-align-items:center;
-gap:12px;
-cursor:pointer;
-position:relative;
-}
-
-.avatar{
-width:36px;
-height:36px;
-border-radius:50%;
-background:#1c1c1c;
-color:white;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:13px;
-font-weight:500;
-}
-
-.profile-card{
-position:absolute;
-top:55px;
-right:0;
-background:white;
-padding:18px 22px;
-border-radius:10px;
-box-shadow:0 20px 40px rgba(0,0,0,0.08);
-width:220px;
-opacity:0;
-pointer-events:none;
-transition:.3s;
-}
-
-.profile-mini:hover .profile-card{
-opacity:1;
-pointer-events:auto;
-}
-
-.profile-card strong{
-display:block;
-font-size:14px;
-margin-bottom:6px;
-}
-
-.profile-card span{
-display:block;
 font-size:12px;
-color:#666;
-margin-bottom:4px;
+letter-spacing:.2em;
+color:#555;
 }
-
-/* SECTIONS */
 
 section{
 min-height:100vh;
-padding:160px 12% 100px;
+padding:180px 12% 120px;
 display:flex;
 flex-direction:column;
 justify-content:center;
 }
 
+/* HERO */
+
 .hero h1{
 font-family:'Playfair Display',serif;
-font-size:64px;
-font-weight:600;
-max-width:800px;
-line-height:1.15;
+font-size:74px;
+max-width:900px;
+line-height:1.05;
+}
+
+.hero span{
+color:#b7a46b;
 }
 
 .hero p{
-margin-top:35px;
+margin-top:40px;
 font-size:20px;
-max-width:600px;
+max-width:520px;
 color:#555;
 }
 
-.btn{
-margin-top:50px;
-display:inline-block;
-padding:14px 36px;
-border-radius:40px;
-border:1px solid #1c1c1c;
-text-decoration:none;
-color:#1c1c1c;
-font-size:13px;
-letter-spacing:.5px;
-transition:.3s;
-width:fit-content;
+/* editorial divider */
+.line{
+width:60px;height:1px;background:#b7a46b;margin:60px 0;
 }
 
-.btn:hover{
-background:#1c1c1c;
-color:white;
+.btn{
+margin-top:40px;
+border:1px solid #1c1c1c;
+padding:14px 40px;
+text-decoration:none;
+font-size:12px;
+letter-spacing:.3em;
+color:#1c1c1c;
+width:fit-content;
 }
 
 h2{
 font-family:'Playfair Display',serif;
-font-size:42px;
+font-size:46px;
 margin-bottom:40px;
 }
 
-/* CARDS */
+/* cards */
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:50px;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:70px;
 margin-top:60px;
 }
 
 .card{
 background:white;
-padding:45px;
-border-radius:8px;
-box-shadow:0 20px 40px rgba(0,0,0,0.05);
-transition:.4s;
+padding:50px;
+box-shadow:0 25px 60px rgba(0,0,0,.05);
+transition:.6s;
 }
 
-.card:hover{
-transform:translateY(-10px);
-box-shadow:0 30px 60px rgba(0,0,0,0.08);
-}
+.card:hover{transform:translateY(-12px)}
 
-/* FOOTER */
+.quote{
+font-family:'Playfair Display',serif;
+font-size:28px;
+max-width:600px;
+margin:120px auto;
+text-align:center;
+color:#444;
+}
 
 footer{
-padding:80px 12%;
+padding:120px 12%;
 text-align:center;
-font-size:13px;
+font-size:12px;
+letter-spacing:.2em;
 color:#777;
-border-top:1px solid rgba(0,0,0,0.05);
 }
 
 @media(max-width:768px){
 .hero h1{font-size:42px;}
-nav{flex-direction:column;gap:10px;}
 }
 
 </style>
@@ -195,80 +144,75 @@ nav{flex-direction:column;gap:10px;}
 <body>
 
 <nav>
-<div><strong>Ashish Chouhan</strong></div>
-
-<div style="display:flex;align-items:center;gap:25px;">
-<a href="#about">About</a>
-<a href="#research">Research</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
-
-<div class="profile-mini">
-<div class="avatar">AC</div>
-
-<div class="profile-card">
 <strong>Ashish Chouhan</strong>
-<span>Climate–Agriculture Researcher</span>
-<span>Institution: Independent / University</span>
-<span>your@email.com</span>
-</div>
-
-</div>
+<div>
+<a href="#about">ABOUT</a>
+<a href="#research">RESEARCH</a>
+<a href="#projects">PROJECTS</a>
+<a href="#contact">CONTACT</a>
 </div>
 </nav>
 
 <section class="hero">
 <h1>
-Climate Risk, Agricultural Productivity,<br>
-and Long-Run Adaptation.
+Climate Risk,<br>
+Agricultural Productivity,<br>
+and <span>Human Adaptation</span>.
 </h1>
+
+<div class="line"></div>
+
 <p>
-I study how climate variability and extreme weather shape agricultural outcomes in India, combining high-resolution climate data with applied econometric methods.
+Applied climate–agriculture research using high-resolution data and econometric methods in India.
 </p>
-<a href="#research" class="btn">Explore Research</a>
+
+<a href="#research" class="btn">ENTER</a>
 </section>
 
 <section id="about">
 <h2>About</h2>
 <p>
-My research lies at the intersection of climate science and agricultural economics. I construct district-level exposure measures from ERA5 and IMD datasets (1951–2020) to estimate nonlinear temperature and rainfall impacts on crop yields and adaptation dynamics.
+I study how climate variability and extremes affect agricultural outcomes across Indian districts. My work integrates ERA5 and IMD climate data with panel econometric models to quantify nonlinear temperature exposure, rainfall shocks, and adaptation mechanisms.
 </p>
 </section>
+
+<div class="quote">
+“Climate change is not a future risk — it is a present economic reality.”
+</div>
 
 <section id="research">
 <h2>Research Areas</h2>
 <div class="grid">
 <div class="card">Nonlinear temperature damage functions</div>
-<div class="card">Extreme rainfall & dry spell metrics</div>
+<div class="card">Extreme rainfall & dry spells</div>
 <div class="card">Irrigation as adaptation</div>
-<div class="card">Panel econometrics & causal inference</div>
+<div class="card">Panel econometrics</div>
 </div>
 </section>
 
 <section id="projects">
 <h2>Current Work</h2>
 <div class="grid">
-<div class="card">Climate shocks and maize yield responses</div>
-<div class="card">Adaptation mechanisms in irrigated districts</div>
-<div class="card">District-level climate exposure systems</div>
+<div class="card">Maize and paddy yield responses to climate shocks</div>
+<div class="card">Adaptation through irrigation</div>
+<div class="card">District exposure systems (1951–2020)</div>
 </div>
 </section>
 
 <section id="contact">
 <h2>Contact</h2>
 <p>
-Email: your@email.com<br>
-GitHub: github.com/ashishchouhan3
+your@email.com<br>
+github.com/ashishchouhan3
 </p>
 </section>
 
 <footer>
-© 2026 Ashish Chouhan
+ASHISH CHOUHAN — CLIMATE & AGRICULTURE
 </footer>
 
 <script>
 gsap.from(".hero h1",{opacity:0,y:40,duration:1});
-gsap.from(".hero p",{opacity:0,y:20,duration:1,delay:.4});
 </script>
 
 </body>
