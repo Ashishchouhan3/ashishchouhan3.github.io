@@ -3,145 +3,109 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ashish Chouhan | Climate & Agriculture Research</title>
+<title>Ashish Chouhan — Climate × Agriculture</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
 <style>
 
-/* ===== GLOBAL ===== */
-* {margin:0;padding:0;box-sizing:border-box;}
+*{margin:0;padding:0;box-sizing:border-box}
 
-html {scroll-behavior:smooth;}
+html{scroll-behavior:smooth}
 
-body {
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to bottom right,#0f172a,#1e293b);
-  color: white;
-  overflow-x:hidden;
+body{
+font-family:Inter,sans-serif;
+background:#05060a;
+color:white;
+overflow-x:hidden;
 }
 
-section {
-  padding:100px 10%;
-  position:relative;
+section{
+min-height:100vh;
+padding:120px 10%;
+display:flex;
+flex-direction:column;
+justify-content:center;
 }
 
-h1,h2,h3 {
-  font-weight:600;
+nav{
+position:fixed;
+top:0;
+width:100%;
+padding:25px 10%;
+display:flex;
+justify-content:space-between;
+backdrop-filter:blur(20px);
+background:rgba(0,0,0,.4);
+z-index:999;
 }
 
-/* ===== NAVBAR ===== */
-nav {
-  position:fixed;
-  width:100%;
-  top:0;
-  backdrop-filter: blur(10px);
-  background: rgba(15,23,42,0.7);
-  display:flex;
-  justify-content:space-between;
-  padding:20px 10%;
-  z-index:1000;
+nav a{
+color:white;
+margin-left:25px;
+text-decoration:none;
+opacity:.7;
 }
 
-nav a {
-  color:white;
-  margin-left:25px;
-  text-decoration:none;
-  font-weight:500;
-  transition:0.3s;
+nav a:hover{opacity:1}
+
+.hero h1{
+font-size:70px;
+line-height:1;
+background:linear-gradient(90deg,#38bdf8,#22c55e);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
-nav a:hover {
-  color:#38bdf8;
+.hero p{
+margin-top:30px;
+font-size:22px;
+max-width:600px;
+color:#cbd5f5;
 }
 
-/* ===== HERO ===== */
-.hero {
-  height:100vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
+.btn{
+margin-top:40px;
+display:inline-block;
+padding:15px 35px;
+border-radius:40px;
+background:linear-gradient(90deg,#38bdf8,#22c55e);
+color:black;
+font-weight:600;
+cursor:pointer;
 }
 
-.hero h1 {
-  font-size:64px;
-  background: linear-gradient(to right,#38bdf8,#22c55e);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:40px;
+margin-top:70px;
 }
 
-.hero p {
-  font-size:22px;
-  margin-top:20px;
-  max-width:600px;
-  color:#cbd5e1;
+.card{
+background:rgba(255,255,255,.05);
+border-radius:20px;
+padding:40px;
+backdrop-filter:blur(20px);
+transition:.4s;
 }
 
-.btn {
-  display:inline-block;
-  margin-top:40px;
-  padding:14px 28px;
-  background:linear-gradient(to right,#38bdf8,#22c55e);
-  border-radius:40px;
-  color:black;
-  font-weight:600;
-  text-decoration:none;
-  transition:0.3s;
+.card:hover{
+transform:translateY(-15px);
 }
 
-.btn:hover {
-  transform:scale(1.05);
+h2{
+font-size:42px;
+margin-bottom:20px;
 }
 
-/* ===== GLASS CARDS ===== */
-.glass {
-  background: rgba(255,255,255,0.08);
-  border-radius:20px;
-  padding:40px;
-  backdrop-filter: blur(15px);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-  transition:0.4s;
-}
-
-.glass:hover {
-  transform:translateY(-10px);
-}
-
-.grid {
-  display:grid;
-  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-  gap:30px;
-  margin-top:60px;
-}
-
-h2 {
-  font-size:40px;
-  margin-bottom:20px;
-}
-
-/* ===== ANIMATION ===== */
-.reveal {
-  opacity:0;
-  transform:translateY(60px);
-  transition: all 0.8s ease;
-}
-
-.reveal.active {
-  opacity:1;
-  transform:translateY(0);
-}
-
-/* ===== FOOTER ===== */
-footer {
-  text-align:center;
-  padding:40px;
-  background:#020617;
-  color:#94a3b8;
-}
-
-@media(max-width:768px){
-  .hero h1 {font-size:40px;}
-  nav {flex-direction:column;}
+footer{
+padding:60px;
+text-align:center;
+color:#777;
 }
 
 </style>
@@ -150,66 +114,53 @@ footer {
 <body>
 
 <nav>
-  <div><strong>Ashish Chouhan</strong></div>
-  <div>
-    <a href="#about">About</a>
-    <a href="#research">Research</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </div>
+<b>Ashish Chouhan</b>
+<div>
+<a href="#about">About</a>
+<a href="#research">Research</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</div>
 </nav>
 
 <section class="hero">
-  <h1>Understanding Climate. Transforming Agriculture.</h1>
-  <p>
-  I analyze how climate variability and extreme weather affect agricultural productivity in India, combining high-resolution climate data and econometric modeling.
-  </p>
-  <a href="#research" class="btn">Explore My Work</a>
+<h1>Climate Intelligence<br>for Agriculture</h1>
+<p>I quantify climate risk and agricultural productivity using high-resolution data and causal econometrics.</p>
+<div class="btn">Explore My Work</div>
 </section>
 
-<section id="about" class="reveal">
-  <h2>About Me</h2>
-  <div class="glass">
-    I work at the intersection of climate science and agricultural economics.
-    My research quantifies nonlinear temperature exposure, rainfall extremes,
-    and adaptation mechanisms using district-level panel data and high-resolution datasets (ERA5, IMD).
-  </div>
+<section id="about">
+<h2>Who I Am</h2>
+<div class="card">
+I work at the frontier of climate science and agricultural economics, studying nonlinear temperature exposure, rainfall extremes, and adaptation mechanisms across Indian districts using ERA5 and IMD datasets.
+</div>
 </section>
 
-<section id="research" class="reveal">
-  <h2>Research Interests</h2>
-  <div class="grid">
-    <div class="glass">🌡 Nonlinear temperature exposure</div>
-    <div class="glass">🌧 Extreme rainfall & dry spells</div>
-    <div class="glass">🚜 Adaptation & irrigation</div>
-    <div class="glass">📊 Panel econometrics</div>
-  </div>
+<section id="research">
+<h2>Research Focus</h2>
+<div class="grid">
+<div class="card">🌡 Temperature damage functions</div>
+<div class="card">🌧 Extreme rainfall & dry spells</div>
+<div class="card">🚜 Adaptation & irrigation</div>
+<div class="card">📊 Panel econometrics</div>
+</div>
 </section>
 
-<section id="projects" class="reveal">
-  <h2>Current Projects</h2>
-  <div class="grid">
-    <div class="glass">
-      <h3>Climate Shocks</h3>
-      Estimating bin-level temperature and rainfall impacts on maize & paddy yields.
-    </div>
-    <div class="glass">
-      <h3>Adaptation</h3>
-      Measuring mitigation effects of irrigation and input use.
-    </div>
-    <div class="glass">
-      <h3>Data Systems</h3>
-      Constructing district exposure metrics (1951–2020).
-    </div>
-  </div>
+<section id="projects">
+<h2>Active Projects</h2>
+<div class="grid">
+<div class="card">Climate shocks on maize & paddy yields</div>
+<div class="card">Irrigation as adaptation</div>
+<div class="card">District climate exposure system</div>
+</div>
 </section>
 
-<section id="contact" class="reveal">
-  <h2>Contact</h2>
-  <div class="glass">
-    Email: your@email.com<br>
-    GitHub: https://github.com/ashishchouhan3
-  </div>
+<section id="contact">
+<h2>Let’s Collaborate</h2>
+<div class="card">
+Email: your@email.com<br><br>
+GitHub: github.com/ashishchouhan3
+</div>
 </section>
 
 <footer>
@@ -217,18 +168,24 @@ footer {
 </footer>
 
 <script>
-function reveal() {
-  var reveals = document.querySelectorAll(".reveal");
-  for (var i = 0; i < reveals.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 100;
-    if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("active");
-    }
-  }
-}
-window.addEventListener("scroll", reveal);
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from(".hero h1",{y:80,opacity:0,duration:1});
+gsap.from(".hero p",{y:40,opacity:0,duration:1,delay:.4});
+
+gsap.utils.toArray("section").forEach(sec=>{
+gsap.from(sec,{
+scrollTrigger:{
+trigger:sec,
+start:"top 80%"
+},
+opacity:0,
+y:80,
+duration:1
+})
+})
+
 </script>
 
 </body>
