@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ashish Chouhan | Climate & Agriculture Research</title>
 
 <style>
@@ -12,106 +13,125 @@ body {
   font-family: "Segoe UI", Arial, sans-serif;
   background: #f4f7fb;
   color: #333;
+  line-height: 1.6;
 }
 
 a {
-  color: #2563eb;
+  color: #1d4ed8;
   text-decoration: none;
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 1000px;
   margin: auto;
   padding: 40px 20px;
+}
+
+/* ===== Navigation ===== */
+nav {
+  background: #0f172a;
+  padding: 15px 0;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+nav a {
+  color: white;
+  margin-left: 20px;
+  font-size: 14px;
+  letter-spacing: 0.5px;
 }
 
 /* ===== Header ===== */
 header {
   background: linear-gradient(135deg,#2563eb,#16a34a);
   color: white;
-  padding: 80px 20px;
+  padding: 90px 20px;
+  text-align: center;
 }
 
-.hero {
-  display: flex;
-  gap: 40px;
-  align-items: center;
-}
-
-.hero img {
-  width: 180px;
-  border-radius: 50%;
-  border: 5px solid white;
-}
-
-.hero h1 {
+header h1 {
   margin: 0;
-  font-size: 40px;
+  font-size: 42px;
+  font-weight: 600;
 }
 
-.hero p {
+header p {
   font-size: 18px;
-  opacity: 0.9;
+  opacity: 0.95;
+  margin-top: 15px;
 }
 
 /* ===== Sections ===== */
-
 section {
-  margin-top: 60px;
+  margin-top: 70px;
 }
 
 h2 {
-  font-size: 28px;
+  font-size: 26px;
   border-left: 6px solid #2563eb;
   padding-left: 12px;
+  margin-bottom: 25px;
 }
 
 /* ===== Cards ===== */
-
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
   gap: 25px;
-  margin-top: 25px;
 }
 
 .card {
   background: white;
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  transition: transform .2s;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  transition: all .2s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-}
-
-/* ===== Footer ===== */
-
-footer {
-  margin-top: 80px;
-  padding: 30px;
-  background: #0f172a;
-  color: white;
-  text-align: center;
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
 }
 
 /* ===== Buttons ===== */
-
 .btn {
   display: inline-block;
-  background: #2563eb;
+  background: #1d4ed8;
   color: white;
-  padding: 10px 18px;
+  padding: 10px 20px;
   border-radius: 8px;
-  margin-top: 10px;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.btn:hover {
+  background: #1e40af;
+}
+
+/* ===== Footer ===== */
+footer {
+  margin-top: 80px;
+  padding: 40px 20px;
+  background: #0f172a;
+  color: white;
+  text-align: center;
+  font-size: 14px;
 }
 
 /* ===== Responsive ===== */
-
 @media(max-width:700px){
-.hero{flex-direction:column;text-align:center;}
+  nav .container {
+    flex-direction: column;
+  }
+  nav a {
+    margin: 10px 0 0 0;
+  }
 }
 
 </style>
@@ -119,93 +139,74 @@ footer {
 
 <body>
 
+<!-- Navigation -->
+<nav>
+  <div class="container">
+    <div><strong>Ashish Chouhan</strong></div>
+    <div>
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Header -->
 <header>
-<div class="container hero">
-
-<img src="profile.jpg">
-
-<div>
-<h1>Ashish Chouhan</h1>
-<p>
-Climate–Agriculture Researcher<br>
-India<br>
-Email: your@email.com
-</p>
-
-<a class="btn" href="cv.pdf">Download CV</a>
-</div>
-
-</div>
+  <h1>Ashish Chouhan</h1>
+  <p>
+    Climate–Agriculture Researcher | India<br>
+    Climate Impacts · Agricultural Productivity · Adaptation
+  </p>
+  <a class="btn" href="#">Download CV</a>
 </header>
 
 <div class="container">
 
-<section>
+<section id="about">
 <h2>About Me</h2>
-
 <p>
-I study how climate variability and extremes affect agricultural productivity in India.
-My research combines high-resolution climate data (ERA5, IMD), district-level yields,
-and panel econometric methods to quantify impacts and adaptation mechanisms.
+I study the impact of climate variability and extreme weather events on agricultural productivity in India. 
+My work integrates high-resolution climate datasets (ERA5, IMD) with district-level yield data and panel econometric methods to quantify nonlinear temperature and rainfall effects, as well as adaptation mechanisms.
 </p>
 </section>
 
-<section>
+<section id="research">
 <h2>Research Interests</h2>
-
 <div class="grid">
-
-<div class="card">🌡 Temperature exposure and crop yields</div>
-<div class="card">🌧 Rainfall extremes & dry spells</div>
-<div class="card">🚜 Agricultural adaptation</div>
-<div class="card">💧 Irrigation & water sustainability</div>
-<div class="card">📊 Panel econometrics</div>
-
+  <div class="card">🌡 Nonlinear temperature exposure & crop yields</div>
+  <div class="card">🌧 Rainfall extremes & dry spell metrics</div>
+  <div class="card">🚜 Agricultural adaptation & technology adoption</div>
+  <div class="card">💧 Irrigation and water sustainability</div>
+  <div class="card">📊 Panel econometrics & causal inference</div>
 </div>
 </section>
 
-<section>
+<section id="projects">
 <h2>Current Projects</h2>
-
 <div class="grid">
-
-<div class="card">
-<b>Climate Shocks</b><br><br>
-Nonlinear temperature bins and extreme rainfall impacts on maize and paddy.
-</div>
-
-<div class="card">
-<b>Adaptation</b><br><br>
-Role of irrigation and technology in moderating climate damages.
-</div>
-
-<div class="card">
-<b>Data Construction</b><br><br>
-District-level exposure metrics from ERA5 + IMD (1951–2020).
-</div>
-
+  <div class="card">
+    <strong>Climate Shocks</strong><br><br>
+    Estimating nonlinear temperature bin effects and extreme rainfall impacts on maize and paddy yields across Indian districts.
+  </div>
+  <div class="card">
+    <strong>Adaptation Mechanisms</strong><br><br>
+    Assessing how irrigation and input use mitigate climate-induced productivity losses.
+  </div>
+  <div class="card">
+    <strong>Climate Data Construction</strong><br><br>
+    Building district-level exposure metrics from ERA5 and IMD datasets (1951–2020).
+  </div>
 </div>
 </section>
 
-<section>
-<h2>Data & Code</h2>
-
-<p>
-All replication files and datasets:
-</p>
-
-<a class="btn" href="https://github.com/yourusername">GitHub Profile</a>
-
-</section>
-
-<section>
+<section id="contact">
 <h2>Contact</h2>
-
 <p>
 Email: your@email.com<br>
-GitHub: github.com/yourusername
+GitHub: https://github.com/ashishchouhan3
 </p>
-
 </section>
 
 </div>
