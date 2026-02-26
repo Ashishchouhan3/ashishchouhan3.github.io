@@ -3,329 +3,161 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ashish Chouhan | Agricultural Risk & Climate Economics</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<title>Ashish Chouhan | Agricultural & Climate Economics</title>
 
 <style>
 
-*{margin:0;padding:0;box-sizing:border-box}
-
 body{
-font-family:Inter,sans-serif;
-background:#f6f5f2;
-color:#1c1c1c;
-line-height:1.7;
+font-family: Arial, Helvetica, sans-serif;
+margin:0;
+background:#ffffff;
+color:#222;
+line-height:1.6;
 }
 
-body:before{
-content:"";
-position:fixed;
-top:0;left:0;width:100%;height:100%;
-background:url("https://www.transparenttextures.com/patterns/paper-fibers.png");
-opacity:.12;
-pointer-events:none;
+header{
+background:#18453B; /* MSU-style deep green */
+color:white;
+padding:30px 10%;
 }
 
-nav{
-position:fixed;
-top:0;width:100%;
-padding:28px 12%;
-background:rgba(246,245,242,.9);
-display:flex;
-justify-content:space-between;
-border-bottom:1px solid rgba(0,0,0,.05);
-z-index:10;
+header h1{
+margin:0;
+font-size:32px;
 }
 
-nav a{
-margin-left:25px;
-text-decoration:none;
-font-size:12px;
-letter-spacing:.2em;
-color:#555;
+header p{
+margin:5px 0 0 0;
+font-size:15px;
 }
 
-section{
-min-height:100vh;
-padding:180px 12% 120px;
-display:flex;
-flex-direction:column;
-justify-content:center;
-}
-
-.hero h1{
-font-family:'Playfair Display',serif;
-font-size:70px;
-max-width:900px;
-line-height:1.05;
-}
-
-.hero span{color:#b7a46b}
-
-.hero p{
-margin-top:40px;
-font-size:20px;
-max-width:560px;
-color:#555;
-}
-
-.line{
-width:60px;height:1px;background:#b7a46b;margin:60px 0;
+.container{
+width:80%;
+margin:40px auto;
 }
 
 h2{
-font-family:'Playfair Display',serif;
-font-size:44px;
+border-bottom:2px solid #18453B;
+padding-bottom:5px;
+margin-top:50px;
+font-size:20px;
+}
+
+.contact-box{
+background:#f4f4f4;
+padding:20px;
+margin-bottom:40px;
+border-left:4px solid #18453B;
+}
+
+ul{
+margin-top:10px;
+}
+
+li{
+margin-bottom:10px;
+}
+
+.section{
 margin-bottom:40px;
 }
 
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:60px;
+.footer{
 margin-top:60px;
-}
-
-/* Luxury cards */
-
-.card{
-background:linear-gradient(180deg,#ffffff,#fafafa);
-padding:48px;
-border-radius:12px;
-border:1px solid rgba(0,0,0,.04);
-box-shadow:
-0 10px 25px rgba(0,0,0,.04),
-0 30px 60px rgba(0,0,0,.03);
-transition:all .6s cubic-bezier(.2,.8,.2,1);
-}
-
-.card:hover{
-transform:translateY(-8px);
-box-shadow:
-0 20px 40px rgba(0,0,0,.06),
-0 40px 80px rgba(0,0,0,.05);
-}
-
-.card strong{
-display:block;
-font-size:18px;
-margin-bottom:8px;
-letter-spacing:.02em;
-}
-
-/* Quote */
-
-.quote{
-font-family:'Playfair Display',serif;
-font-size:26px;
-max-width:650px;
-margin:140px auto;
+padding:20px;
+background:#f4f4f4;
 text-align:center;
-color:#444;
-}
-
-.quote span{
-display:block;
-margin-top:15px;
 font-size:13px;
-letter-spacing:.15em;
-color:#777;
+color:#666;
 }
 
-/* Working papers */
-
-.work-item{
-border-top:1px solid rgba(0,0,0,.08);
-padding:25px 0;
-cursor:pointer;
+a{
+color:#18453B;
+text-decoration:none;
 }
 
-.work-title{
-font-size:18px;
-letter-spacing:.02em;
-}
-
-.work-abstract{
-max-height:0;
-overflow:hidden;
-transition:max-height .6s ease;
-color:#555;
-font-size:15px;
-margin-top:15px;
-}
-
-.work-item.active .work-abstract{max-height:400px}
-
-.tools{
-margin-top:30px;
-font-size:15px;
-color:#555;
-}
-
-footer{
-padding:120px 12%;
-text-align:center;
-font-size:12px;
-letter-spacing:.2em;
-color:#777;
-}
-
-@media(max-width:768px){
-.hero h1{font-size:42px;}
+a:hover{
+text-decoration:underline;
 }
 
 </style>
 </head>
-
 <body>
 
-<nav>
-<strong>Ashish Chouhan</strong>
-<div>
-<a href="#about">ABOUT</a>
-<a href="#research">RESEARCH</a>
-<a href="#projects">PROJECTS</a>
-<a href="#working">WORKING PAPERS</a>
-<a href="#contact">CONTACT</a>
-</div>
-</nav>
+<header>
+<h1>Ashish Chouhan</h1>
+<p>Agricultural Risk & Climate Economics</p>
+<p>Independent Researcher | India</p>
+</header>
 
-<section class="hero">
-<h1>
-Climate Risk,<br>
-Farmer Behavior,<br>
-and <span>Welfare Impacts</span>.
-</h1>
+<div class="container">
 
-<div class="line"></div>
-
-<p>
-Applied research on crop insurance, climate–yield relationships, and farmer welfare using high-resolution climate data and micro-econometric methods in India.
-</p>
-</section>
-
-<section id="about">
-<h2>About</h2>
-
-<p>
-My research examines how farmers respond to increasing climate risk, and whether institutional mechanisms such as crop insurance mitigate welfare losses. I combine district-level climate exposure modeling with primary survey data to study adoption behavior, productivity impacts, and income stability.
-</p>
-
-<p>
-I conducted primary field surveys covering approximately 400 farmers for my thesis work, forming the basis for empirical analysis of insurance adoption and climate adaptation outcomes. My applied work draws on impact evaluation frameworks alongside panel econometric methods.
-</p>
-
-<div class="tools">
-<strong>Methods & Tools:</strong> Dynamic panel models, DKSE, MMQR, impact evaluation • Stata, R • Learning Python
-</div>
-
-</section>
-
-<div class="quote">
-“Climate change is already reshaping agricultural productivity — adaptation determines how costly that reshaping will be.”
-<span>— David Lobell</span>
-</div>
-
-<section id="research">
-<h2>Research Areas</h2>
-
-<div class="grid">
-
-<div class="card">
-<strong>Agricultural Risk & Crop Insurance</strong>
-Adoption behavior, moral hazard, and welfare implications of insurance participation under climate uncertainty.
-</div>
-
-<div class="card">
-<strong>Climate–Yield Modeling</strong>
-Nonlinear temperature and rainfall exposure functions using ERA5 and IMD data with district-level yields.
-</div>
-
-<div class="card">
-<strong>Impact Evaluation</strong>
-Survey-based evaluation of institutional interventions and farmer outcomes using quasi-experimental approaches.
-</div>
-
-<div class="card">
-<strong>Applied Econometrics</strong>
-Dynamic panels, DKSE, MMQR, heterogeneous climate effects, and distribution-sensitive estimation.
-</div>
-
-</div>
-</section>
-
-<section id="projects">
-<h2>Current Work</h2>
-
-<div class="grid">
-
-<div class="card">
-Crop Insurance and Farmer Welfare: estimating impacts on yield variability and income stability.
-</div>
-
-<div class="card">
-Nonlinear Climate–Yield Relationships across Indian districts using MMQR.
-</div>
-
-<div class="card">
-Risk, Adoption, and Institutional Design under climate stress.
-</div>
-
-</div>
-</section>
-
-<section id="working">
-<h2>Working Papers</h2>
-
-<div class="work-item">
-<div class="work-title">Crop Insurance Adoption and Farmer Welfare under Climate Risk</div>
-<div class="work-abstract">
-Using primary survey data from approximately 400 farmers combined with district climate exposure measures, this paper evaluates whether crop insurance participation stabilizes income and reduces yield volatility. Dynamic panel models estimate heterogeneous welfare impacts under varying climate stress.
-</div>
-</div>
-
-<div class="work-item">
-<div class="work-title">Nonlinear Climate Impacts on Crop Yields in India</div>
-<div class="work-abstract">
-This study estimates temperature and precipitation exposure functions using ERA5 and IMD datasets (1951–2020). MMQR and DKSE approaches reveal asymmetric yield responses under extreme heat and rainfall shocks.
-</div>
-</div>
-
-<div class="work-item">
-<div class="work-title">Climate Risk, Institutional Adoption, and Adaptation</div>
-<div class="work-abstract">
-This paper examines interactions between climate variability and institutional responses, testing whether insurance uptake moderates climate-induced productivity losses.
-</div>
-</div>
-
-</section>
-
-<section id="contact">
-<h2>Contact</h2>
-<p>
-Ashish Chouhan<br>
-Agricultural Risk & Climate Economics<br><br>
+<div class="contact-box">
+<strong>Contact Information</strong><br><br>
 Email: your@email.com<br>
-GitHub: github.com/ashishchouhan3
+Location: India<br>
+GitHub: <a href="https://github.com/ashishchouhan3">github.com/ashishchouhan3</a>
+</div>
+
+<div class="section">
+<h2>Research Interests</h2>
+<ul>
+<li>Agricultural risk and crop insurance adoption</li>
+<li>Climate–yield relationships and nonlinear temperature exposure</li>
+<li>Farmer behavior and institutional adaptation</li>
+<li>Impact evaluation and welfare analysis</li>
+<li>Panel econometrics and distributional methods (DKSE, MMQR)</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>Current Research</h2>
+<ul>
+<li><strong>Crop Insurance and Farmer Welfare under Climate Risk</strong><br>
+Analysis of crop insurance participation and its impact on yield variability and income stability using survey and panel data.</li>
+
+<li><strong>Nonlinear Climate Impacts on Crop Yields in India</strong><br>
+Estimation of temperature and rainfall exposure functions using ERA5 and IMD datasets (1951–2020).</li>
+
+<li><strong>Climate Risk, Institutional Adoption, and Adaptation</strong><br>
+Evaluation of whether institutional mechanisms moderate climate-induced productivity losses.</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>Primary Survey Work</h2>
+<p>
+Conducted field surveys of approximately 400 farmers as part of thesis research.
+The survey data supports empirical analysis of crop insurance adoption,
+climate risk perception, and welfare outcomes under environmental uncertainty.
 </p>
-</section>
+</div>
 
-<footer>
-ASHISH CHOUHAN — AGRICULTURAL RISK & CLIMATE ECONOMICS
-</footer>
+<div class="section">
+<h2>Methods & Technical Skills</h2>
+<ul>
+<li>Dynamic panel data models</li>
+<li>DKSE and MMQR estimation</li>
+<li>Impact evaluation frameworks</li>
+<li>Stata, R</li>
+<li>Currently learning Python</li>
+</ul>
+</div>
 
-<script>
-gsap.from(".hero h1",{opacity:0,y:40,duration:1});
+<div class="section">
+<h2>Working Papers</h2>
+<ul>
+<li><strong>Crop Insurance Adoption and Farmer Welfare under Climate Risk</strong> (Draft in progress)</li>
+<li><strong>Nonlinear Climate–Yield Relationships in Indian Agriculture</strong> (Draft in progress)</li>
+<li><strong>Climate Risk, Institutional Adoption, and Adaptation</strong> (Draft in progress)</li>
+</ul>
+</div>
 
-document.querySelectorAll(".work-item").forEach(item=>{
-item.addEventListener("click",()=>{
-item.classList.toggle("active");
-});
-});
-</script>
+</div>
+
+<div class="footer">
+© 2026 Ashish Chouhan | Agricultural & Climate Economics
+</div>
 
 </body>
 </html>
