@@ -11,22 +11,28 @@
 
 body{
 margin:0;
-font-family:Inter,sans-serif;
 background:#ffffff;
-color:#1a1a1a;
+color:#111;
+font-family:Inter,sans-serif;
 line-height:1.8;
 }
 
 .container{
-width:65%;
+max-width:820px;
 margin:auto;
-padding:120px 0;
+padding:120px 20px;
 }
 
 h1{
 font-family:'Playfair Display',serif;
 font-size:48px;
-margin-bottom:10px;
+margin:0 0 10px 0;
+}
+
+.subtitle{
+font-size:15px;
+color:#555;
+margin-bottom:60px;
 }
 
 h2{
@@ -36,39 +42,48 @@ margin-top:80px;
 margin-bottom:20px;
 }
 
-.subtitle{
-color:#555;
-margin-bottom:40px;
-}
-
 p{
 margin-bottom:20px;
+font-size:17px;
 }
 
-.highlight-band{
-margin:80px 0;
-padding:40px 0;
-border-top:1px solid #e5e5e5;
-border-bottom:1px solid #e5e5e5;
+strong{
 font-weight:600;
 }
 
+.research-focus{
+font-size:20px;
+font-weight:600;
+margin-bottom:30px;
+}
+
 .paper{
-margin-bottom:35px;
+margin-bottom:40px;
 }
 
 .paper-title{
 font-weight:600;
+margin-bottom:8px;
 }
 
-.small{
-color:#666;
-font-size:14px;
+.presentations{
+margin-top:30px;
+}
+
+.presentations div{
+margin-bottom:8px;
+font-size:16px;
+}
+
+.section-divider{
+height:1px;
+background:#e5e5e5;
+margin:70px 0;
 }
 
 footer{
 margin-top:100px;
-padding-top:40px;
+padding-top:30px;
 border-top:1px solid #e5e5e5;
 font-size:14px;
 color:#777;
@@ -93,59 +108,65 @@ opacity:.7;
 
 <h1>Ashish Chouhan</h1>
 <div class="subtitle">
-PhD Research Scholar in Economics · IIT Guwahati  
-Climate Economics · Agricultural Risk · Development
+PhD Research Scholar in Economics · Indian Institute of Technology Guwahati
+</div>
+
+<div class="research-focus">
+Climate Risk · Agricultural Production · Insurance and Welfare
 </div>
 
 <p>
-My research examines how <strong>climate variability reshapes agricultural risk</strong> and how institutional mechanisms—particularly crop insurance—mediate welfare outcomes under environmental uncertainty.
+I study how <strong>climate shocks propagate through agricultural production systems and affect household welfare</strong> in developing economies. My work examines the transmission of climatic volatility into crop yields and evaluates whether formal insurance mechanisms mitigate resulting income and consumption risk.
 </p>
 
 <p>
-I combine <strong>primary field evidence</strong> from over 400 surveyed farmers with district-level climate exposure measures constructed from ERA5 and IMD datasets. My empirical work applies instrumental variables, endogenous switching regression, dynamic panel models, and distribution-sensitive approaches such as MMQR to identify heterogeneous climate impacts.
+Using district-level agricultural panels combined with high-resolution climate data, I estimate nonlinear yield responses across major crops. Building on this production-risk framework, I analyze selection into crop insurance and assess whether participation improves economic outcomes under climate stress.
 </p>
 
-<div class="highlight-band">
-NET-JRF (UGC, 2018) · INFER 2025 (Italy) · Southeast Asia ERD Conference 2025 (Cambodia)
-</div>
+<div class="section-divider"></div>
 
-<h2>Research in Progress</h2>
+<h2>Working Papers</h2>
 
 <div class="paper">
 <div class="paper-title">
-Crop Insurance Adoption and Farmer Welfare under Climate Risk
+Climate Shocks and Agricultural Productivity
 </div>
-Evaluation of insurance participation using primary survey data and endogenous switching regression frameworks to estimate welfare impacts under climate stress.
-</div>
-
-<div class="paper">
-<div class="paper-title">
-Nonlinear Climate–Yield Relationships in Indian Agriculture
-</div>
-Estimation of temperature and precipitation exposure functions (1951–2020) using MMQR and dynamic panel methods to capture asymmetric yield responses.
+Estimates the impact of temperature and rainfall exposure on yields of soybean, maize, and paddy, documenting heterogeneous production responses to climatic variability.
 </div>
 
 <div class="paper">
 <div class="paper-title">
-Climate Risk, Institutional Design, and Adaptation
+Insurance Participation under Production Risk
 </div>
-Investigation of how farmer-level decision-making interacts with climate variability and institutional access.
+Examines determinants of crop insurance uptake and extent of coverage, characterizing selection into formal risk-transfer mechanisms under climatic uncertainty.
 </div>
 
-<h2>Academic Engagement</h2>
+<div class="paper">
+<div class="paper-title">
+Insurance and Welfare under Climate Stress
+</div>
+Evaluates whether insurance participation improves farm income and consumption outcomes, accounting for endogenous selection into coverage.
+</div>
 
-<p>
-My work has been presented at international and national academic forums including the <strong>International Network for Economic Research (INFER)</strong>, the Southeast Asia Economic Research and Development Conference, the International Conference on Agrarian Change, and the Delhi School of Economics Winter School.
-</p>
+<div class="section-divider"></div>
+
+<h2>Selected Academic Presentations</h2>
+
+<div class="presentations">
+<div>International Network for Economic Research (Italy)</div>
+<div>Southeast Asia Economic Research and Development Conference (Cambodia)</div>
+<div>Indian Society of Agricultural Economics (India)</div>
+<div>International Conference on Agrarian Change (India)</div>
+<div>Delhi School of Economics Winter School</div>
+</div>
+
+<div class="section-divider"></div>
 
 <h2>Contact</h2>
 
 <p>
-Email: your@email.com  
-<br>
-<a href="#">CV (PDF)</a>  
-<br>
-<a href="https://github.com/ashishchouhan3">GitHub</a>
+Email: your@email.com<br>
+<a href="#">Curriculum Vitae (PDF)</a>
 </p>
 
 <footer>
