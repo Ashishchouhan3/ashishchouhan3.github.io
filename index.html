@@ -17,44 +17,49 @@ font-family:Inter,sans-serif;
 line-height:1.8;
 }
 
-.container{
-max-width:820px;
+.wrapper{
+max-width:1200px;
 margin:auto;
-padding:120px 20px;
+padding:100px 40px;
+display:flex;
+gap:80px;
+}
+
+/* LEFT CONTENT */
+
+.main{
+flex:2;
+max-width:720px;
 }
 
 h1{
 font-family:'Playfair Display',serif;
-font-size:48px;
+font-size:52px;
 margin:0 0 10px 0;
 }
 
 .subtitle{
 font-size:15px;
 color:#555;
-margin-bottom:60px;
-}
-
-h2{
-font-family:'Playfair Display',serif;
-font-size:26px;
-margin-top:80px;
-margin-bottom:20px;
-}
-
-p{
-margin-bottom:20px;
-font-size:17px;
-}
-
-strong{
-font-weight:600;
+margin-bottom:50px;
 }
 
 .research-focus{
 font-size:20px;
 font-weight:600;
 margin-bottom:30px;
+}
+
+p{
+font-size:17px;
+margin-bottom:22px;
+}
+
+h2{
+font-family:'Playfair Display',serif;
+font-size:28px;
+margin-top:70px;
+margin-bottom:25px;
 }
 
 .paper{
@@ -66,37 +71,77 @@ font-weight:600;
 margin-bottom:8px;
 }
 
-.presentations{
-margin-top:30px;
-}
-
-.presentations div{
-margin-bottom:8px;
-font-size:16px;
-}
-
 .section-divider{
 height:1px;
 background:#e5e5e5;
-margin:70px 0;
+margin:60px 0;
 }
 
-footer{
-margin-top:100px;
-padding-top:30px;
-border-top:1px solid #e5e5e5;
+/* RIGHT PROFILE CARD */
+
+.sidebar{
+flex:1;
+}
+
+.profile-card{
+position:sticky;
+top:120px;
+padding:30px;
+border:1px solid #e5e5e5;
+border-radius:14px;
+background:#fafafa;
+}
+
+.profile-card img{
+width:120px;
+height:120px;
+border-radius:50%;
+object-fit:cover;
+margin-bottom:20px;
+}
+
+.profile-card h3{
+margin:0 0 5px 0;
+font-size:18px;
+}
+
+.profile-card p{
 font-size:14px;
-color:#777;
+color:#555;
+margin:4px 0;
 }
 
-a{
+.profile-card a{
+font-size:14px;
 color:#000;
 text-decoration:none;
 border-bottom:1px solid #000;
 }
 
-a:hover{
+.profile-card a:hover{
 opacity:.7;
+}
+
+footer{
+margin-top:80px;
+font-size:14px;
+color:#777;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+.wrapper{
+flex-direction:column;
+}
+.sidebar{
+order:-1;
+}
+.profile-card{
+position:relative;
+top:0;
+margin-bottom:40px;
+}
 }
 
 </style>
@@ -104,7 +149,9 @@ opacity:.7;
 
 <body>
 
-<div class="container">
+<div class="wrapper">
+
+<div class="main">
 
 <h1>Ashish Chouhan</h1>
 <div class="subtitle">
@@ -128,23 +175,17 @@ Using district-level agricultural panels combined with high-resolution climate d
 <h2>Working Papers</h2>
 
 <div class="paper">
-<div class="paper-title">
-Climate Shocks and Agricultural Productivity
-</div>
+<div class="paper-title">Climate Shocks and Agricultural Productivity</div>
 Estimates the impact of temperature and rainfall exposure on yields of soybean, maize, and paddy, documenting heterogeneous production responses to climatic variability.
 </div>
 
 <div class="paper">
-<div class="paper-title">
-Insurance Participation under Production Risk
-</div>
+<div class="paper-title">Insurance Participation under Production Risk</div>
 Examines determinants of crop insurance uptake and extent of coverage, characterizing selection into formal risk-transfer mechanisms under climatic uncertainty.
 </div>
 
 <div class="paper">
-<div class="paper-title">
-Insurance and Welfare under Climate Stress
-</div>
+<div class="paper-title">Insurance and Welfare under Climate Stress</div>
 Evaluates whether insurance participation improves farm income and consumption outcomes, accounting for endogenous selection into coverage.
 </div>
 
@@ -152,26 +193,45 @@ Evaluates whether insurance participation improves farm income and consumption o
 
 <h2>Selected Academic Presentations</h2>
 
-<div class="presentations">
-<div>International Network for Economic Research Annual Conference(Italy)</div>
-<div>Southeast Asia Economic Research and Development Conference (Cambodia)</div>
-<div>Indian Society of Agricultural Economics Annual Conference (India)</div>
-<div>International Conference on Agrarian Change (India)</div>
-<div>Delhi School of Economics Winter School 2024 </div>
-</div>
-
-<div class="section-divider"></div>
-
-<h2>Contact</h2>
-
 <p>
-Email: ashishc54321@gmail.com<br>
-<a href="#">Curriculum Vitae (PDF)</a>
+International Network for Economic Research (Italy)<br>
+Southeast Asia Economic Research and Development Conference (Cambodia)<br>
+Indian Society of Agricultural Economics (India)<br>
+International Conference on Agrarian Change (India)<br>
+Delhi School of Economics Winter School
 </p>
 
 <footer>
 © 2026 Ashish Chouhan
 </footer>
+
+</div>
+
+<div class="sidebar">
+
+<div class="profile-card">
+
+<img src="profile.jpg" alt="Profile Photo">
+
+<h3>Ashish Chouhan</h3>
+<p>Climate & Agricultural Economics</p>
+<p>Indian Institute of Technology Guwahati</p>
+
+<br>
+
+<p>Email:</p>
+<p><a href="mailto:your@email.com">your@email.com</a></p>
+
+<br>
+
+<p><a href="#">Curriculum Vitae</a></p>
+<p><a href="https://github.com/ashishchouhan3">GitHub</a></p>
+<p><a href="#">Google Scholar</a></p>
+<p><a href="#">LinkedIn</a></p>
+
+</div>
+
+</div>
 
 </div>
 
