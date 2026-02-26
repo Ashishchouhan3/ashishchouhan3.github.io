@@ -5,270 +5,161 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ashish Chouhan | Climate & Agricultural Economics</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Source+Sans+3:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 
-*{margin:0;padding:0;box-sizing:border-box}
-
 body{
-font-family:Inter,sans-serif;
-background:#f6f5f2;
-color:#1c1c1c;
+margin:0;
+font-family:'Source Sans 3',sans-serif;
+background:#ffffff;
+color:#222;
 line-height:1.75;
 }
 
-nav{
-position:fixed;
-top:0;width:100%;
-padding:28px 12%;
-background:rgba(246,245,242,.95);
-display:flex;
-justify-content:space-between;
-border-bottom:1px solid rgba(0,0,0,.05);
-z-index:10;
+.container{
+width:72%;
+margin:0 auto;
+padding:80px 0;
 }
 
-nav a{
-margin-left:25px;
-text-decoration:none;
-font-size:12px;
-letter-spacing:.2em;
-color:#555;
+header{
+border-bottom:1px solid #e5e5e5;
+padding-bottom:40px;
+margin-bottom:60px;
 }
 
-section{
-padding:160px 12% 120px;
-}
-
-.hero h1{
+header h1{
 font-family:'Playfair Display',serif;
-font-size:60px;
-line-height:1.1;
-margin-bottom:30px;
+font-size:42px;
+margin:0 0 10px 0;
 }
 
-.hero p{
-font-size:20px;
-max-width:750px;
+header p{
+margin:4px 0;
 color:#555;
-}
-
-/* Research Pillars */
-
-.pillars{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:60px;
-margin-top:70px;
-}
-
-.pillar{
-background:linear-gradient(180deg,#ffffff,#fafafa);
-padding:50px;
-border-radius:16px;
-border:1px solid rgba(0,0,0,.04);
-box-shadow:
-0 15px 40px rgba(0,0,0,.04),
-0 40px 80px rgba(0,0,0,.03);
-transition:.6s ease;
-}
-
-.pillar:hover{
-transform:translateY(-8px);
-box-shadow:
-0 25px 55px rgba(0,0,0,.06),
-0 60px 100px rgba(0,0,0,.05);
-}
-
-.pillar h3{
-font-family:'Playfair Display',serif;
-font-size:22px;
-margin-bottom:15px;
-}
-
-.timeline{
-border-left:2px solid #b7a46b;
-margin-top:40px;
-padding-left:30px;
-}
-
-.timeline-item{
-margin-bottom:40px;
-position:relative;
-}
-
-.timeline-item:before{
-content:"";
-width:12px;height:12px;
-background:#b7a46b;
-border-radius:50%;
-position:absolute;
-left:-37px;top:6px;
-}
-
-.accordion{
-margin-top:40px;
-border-top:1px solid rgba(0,0,0,.08);
-}
-
-.accordion-item{
-padding:25px 0;
-border-bottom:1px solid rgba(0,0,0,.08);
-cursor:pointer;
-}
-
-.accordion-title{
-font-size:18px;
-}
-
-.accordion-content{
-max-height:0;
-overflow:hidden;
-transition:max-height .6s ease;
-margin-top:15px;
-color:#555;
-}
-
-.accordion-item.active .accordion-content{
-max-height:700px;
 }
 
 h2{
 font-family:'Playfair Display',serif;
-font-size:42px;
-margin-bottom:30px;
+font-size:28px;
+margin-top:70px;
+margin-bottom:20px;
 }
 
-footer{
-padding:100px 12%;
-text-align:center;
-font-size:12px;
-letter-spacing:.2em;
+.section{
+margin-bottom:50px;
+}
+
+.project{
+margin-bottom:35px;
+}
+
+.project strong{
+display:block;
+font-size:17px;
+margin-bottom:6px;
+}
+
+ul{
+padding-left:20px;
+}
+
+li{
+margin-bottom:8px;
+}
+
+.footer{
+border-top:1px solid #e5e5e5;
+margin-top:80px;
+padding-top:30px;
+font-size:13px;
 color:#777;
 }
 
 </style>
 </head>
-
 <body>
 
-<nav>
-<strong>Ashish Chouhan</strong>
-<div>
-<a href="#agenda">AGENDA</a>
-<a href="#experience">EXPERIENCE</a>
-<a href="#engagement">ENGAGEMENT</a>
-<a href="#contact">CONTACT</a>
-</div>
-</nav>
+<div class="container">
 
-<section class="hero">
+<header>
+<h1>Ashish Chouhan</h1>
+<p>PhD Research Scholar in Economics</p>
+<p>Indian Institute of Technology Guwahati</p>
+<p>Fields: Climate Economics • Agricultural Risk • Development Economics</p>
+<p>Email: your@email.com</p>
+</header>
 
-<h1>
-Climate Risk, Farmer Behavior,<br>
-and Economic Resilience.
-</h1>
+<div class="section">
+<h2>Research Focus</h2>
 
 <p>
-PhD Research Scholar in Economics at IIT Guwahati working at the intersection of climate variability, agricultural risk, and institutional adaptation. My research integrates primary field evidence with high-resolution climate data to understand how farmers respond to increasing environmental uncertainty and how policy instruments shape welfare outcomes.
+My research investigates how climate variability shapes agricultural productivity and farmer welfare in developing economies. I focus on the interaction between environmental risk and institutional responses—particularly crop insurance—and examine whether formal risk-transfer mechanisms improve economic resilience under increasing climate stress.
 </p>
 
-</section>
-
-<section id="agenda">
-<h2>Research Agenda</h2>
-
-<div class="pillars">
-
-<div class="pillar">
-<h3>Climate Exposure & Agricultural Productivity</h3>
-I construct district-level climate exposure measures using ERA5 and IMD datasets (1951–2020) to estimate nonlinear temperature and precipitation effects on crop yields. Distribution-sensitive approaches such as MMQR and dynamic panel models reveal heterogeneous impacts across regions and production systems.
-</div>
-
-<div class="pillar">
-<h3>Risk, Insurance, and Institutional Design</h3>
-My work examines crop insurance adoption under climate stress, evaluating participation decisions and welfare implications using instrumental variable methods and treatment effect frameworks. Particular emphasis is placed on endogenous selection and switching behavior.
-</div>
-
-<div class="pillar">
-<h3>Field-Based Welfare Analysis</h3>
-Through primary surveys of over 400 farmers, I investigate how climate risk perception, institutional access, and production choices interact. This micro-level evidence informs empirical analysis of income stability, risk management, and adaptation pathways.
-</div>
+<p>
+Across my work, I integrate high-resolution climate datasets (ERA5, IMD) with district-level yield data and primary survey evidence to estimate heterogeneous impacts of temperature and rainfall shocks. Methodologically, I employ dynamic panel models, instrumental variable approaches, endogenous switching regression, and distribution-sensitive methods such as MMQR to identify causal relationships and quantify welfare effects.
+</p>
 
 </div>
 
-</section>
+<div class="section">
+<h2>Current Research Projects</h2>
 
-<section id="experience">
+<div class="project">
+<strong>Crop Insurance Adoption and Farmer Welfare under Climate Risk</strong>
+This project uses primary survey data from over 400 farmers combined with district-level climate exposure measures to evaluate the welfare implications of insurance participation. The empirical strategy addresses selection bias using instrumental variables and endogenous switching regression frameworks.
+</div>
+
+<div class="project">
+<strong>Nonlinear Climate–Yield Relationships in Indian Agriculture</strong>
+Using climate data spanning 1951–2020, this project estimates temperature and precipitation exposure functions and examines asymmetric yield responses under extreme heat and rainfall conditions. Distributional heterogeneity is explored using MMQR techniques.
+</div>
+
+<div class="project">
+<strong>Climate Risk, Institutional Design, and Adaptation</strong>
+This line of research studies how institutional access and farmer-level decision-making interact under environmental uncertainty, linking micro-level behavioral evidence with macro-level climate exposure patterns.
+</div>
+
+</div>
+
+<div class="section">
 <h2>Research Experience</h2>
 
-<div class="timeline">
+<strong>PhD Research Scholar, IIT Guwahati (2020–Present)</strong>
+<ul>
+<li>Designed and implemented a large-scale primary survey investigating determinants of crop insurance adoption and welfare outcomes.</li>
+<li>Integrated climate exposure indices with agricultural panel data for empirical analysis.</li>
+<li>Applied cross-sectional and panel econometric techniques including IV estimation, treatment effects models, and dynamic panel specifications.</li>
+<li>Developed reproducible empirical workflows using Stata and R.</li>
+</ul>
 
-<div class="timeline-item">
-<strong>2020–Present</strong><br>
-PhD Research Scholar in Economics, IIT Guwahati<br><br>
-Designed and implemented large-scale primary surveys; applied instrumental variables, probit models, endogenous switching regression, and dynamic panel methods; developed reproducible workflows in Stata and R for climate–yield integration.
 </div>
 
-</div>
-
-</section>
-
-<section id="engagement">
+<div class="section">
 <h2>Academic Engagement</h2>
 
-<div class="accordion">
+<strong>Selected Conferences</strong>
+<ul>
+<li>INFER 27th Annual Conference (2025, Accepted) – University of Roma Sapienza, Italy</li>
+<li>North East Economic Association (2025)</li>
+<li>Winter School – Delhi School of Economics & Econometric Society (2024)</li>
+<li>National Seminar on Agriculture@75 (2023)</li>
+</ul>
 
-<div class="accordion-item">
-<div class="accordion-title">Conferences & Presentations</div>
-<div class="accordion-content">
-2025 – INFER Annual Conference, University of Roma Sapienza (Accepted)<br>
-2025 – North East Economic Association (NEEA)<br>
-2024 – Winter School, Delhi School of Economics & Econometric Society<br>
-2023 – National Seminar on Agriculture@75, Pondicherry University
-</div>
-</div>
-
-<div class="accordion-item">
-<div class="accordion-title">Training & Methodological Development</div>
-<div class="accordion-content">
-Workshops in causal inference (Scott Cunningham Mixtape Sessions), machine learning applications in economics, NSS & PLFS data analysis, and advanced quantitative methods in R and Python.
-</div>
-</div>
-
-<div class="accordion-item">
-<div class="accordion-title">Fellowships & Grants</div>
-<div class="accordion-content">
-NET-JRF (2018), University Grants Commission (UGC)
-</div>
-</div>
+<strong>Fellowship</strong>
+<ul>
+<li>NET-JRF (2018), University Grants Commission</li>
+</ul>
 
 </div>
 
-</section>
+<div class="footer">
+© 2026 Ashish Chouhan
+</div>
 
-<section id="contact">
-<h2>Contact</h2>
-Email: your@email.com
-</section>
-
-<footer>
-ASHISH CHOUHAN — CLIMATE & AGRICULTURAL ECONOMICS
-</footer>
-
-<script>
-gsap.from(".hero h1",{opacity:0,y:40,duration:1});
-gsap.from(".pillars",{opacity:0,y:60,duration:1,delay:.4});
-
-document.querySelectorAll(".accordion-item").forEach(item=>{
-item.addEventListener("click",()=>{
-item.classList.toggle("active");
-});
-});
-</script>
+</div>
 
 </body>
 </html>
