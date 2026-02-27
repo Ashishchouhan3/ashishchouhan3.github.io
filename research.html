@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research | Ashish Chouhan</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+background:#ffffff;
+color:#111;
+font-family:Inter,sans-serif;
+line-height:1.8;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+padding:80px 20px 120px 20px;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:80px;
+font-size:15px;
+}
+
+nav a{
+text-decoration:none;
+color:#111;
+margin-left:25px;
+}
+
+nav a:hover{
+opacity:.6;
+}
+
+h1{
+font-family:'Playfair Display',serif;
+font-size:36px;
+margin-bottom:40px;
+}
+
+.paper{
+margin-bottom:30px;
+}
+
+.paper-title{
+font-weight:500;
+margin-bottom:5px;
+}
+
+.paper button,
+.paper a{
+background:none;
+border:none;
+border-bottom:1px solid #111;
+cursor:pointer;
+font-size:14px;
+margin-right:15px;
+text-decoration:none;
+color:#111;
+padding:0;
+}
+
+.paper button:hover,
+.paper a:hover{
+opacity:.6;
+}
+
+.abstract{
+display:none;
+margin-top:10px;
+font-size:15px;
+color:#444;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<nav>
+<div><strong>Ashish Chouhan</strong></div>
+<div>
+<a href="index.html">Home</a>
+<a href="research.html">Research</a>
+<a href="cv.pdf" target="_blank">CV</a>
+</div>
+</nav>
+
+<h1>Working Papers</h1>
+
+<div class="paper">
+<div class="paper-title">Climate Shocks and Agricultural Productivity</div>
+<button onclick="toggleAbstract('a1')">Abstract</button>
+<a href="#" target="_blank">Full Paper</a>
+<div class="abstract" id="a1">
+This paper estimates nonlinear yield responses to temperature and rainfall exposure across major crops in Madhya Pradesh using district-level agricultural panel data.
+</div>
+</div>
+
+<div class="paper">
+<div class="paper-title">Insurance Participation under Production Risk</div>
+<button onclick="toggleAbstract('a2')">Abstract</button>
+<a href="#" target="_blank">Full Paper</a>
+<div class="abstract" id="a2">
+This paper examines the determinants of crop insurance uptake and extent of coverage.
+</div>
+</div>
+
+<div class="paper">
+<div class="paper-title">Insurance and Welfare under Climate Stress</div>
+<button onclick="toggleAbstract('a3')">Abstract</button>
+<a href="#" target="_blank">Full Paper</a>
+<div class="abstract" id="a3">
+This paper evaluates whether insurance participation improves farm income and consumption outcomes.
+</div>
+</div>
+
+</div>
+
+<script>
+function toggleAbstract(id){
+var x = document.getElementById(id);
+if (x.style.display === "none" || x.style.display === "") {
+x.style.display = "block";
+} else {
+x.style.display = "none";
+}
+}
+</script>
+
+</body>
+</html>
