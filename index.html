@@ -60,33 +60,61 @@ margin-top:70px;
 margin-bottom:25px;
 }
 
-.paper{
-margin-bottom:40px;
-}
-
-.paper-title{
-font-weight:600;
-margin-bottom:6px;
-}
-
-.paper a{
-font-size:14px;
-color:#000;
-text-decoration:none;
-border-bottom:1px solid #000;
-}
-
-.paper a:hover{
-opacity:.7;
-}
-
 .section-divider{
 height:1px;
 background:#e5e5e5;
 margin:60px 0;
 }
 
-/* RIGHT PROFILE CARD */
+/* PAPER CARDS */
+
+.paper-card{
+border:1px solid #e5e5e5;
+border-radius:12px;
+padding:25px;
+margin-bottom:30px;
+transition:.3s ease;
+}
+
+.paper-card:hover{
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
+
+.paper-title{
+font-weight:600;
+font-size:18px;
+margin-bottom:10px;
+}
+
+.paper-buttons{
+margin-top:15px;
+}
+
+.paper-buttons button,
+.paper-buttons a{
+font-size:14px;
+margin-right:15px;
+background:none;
+border:none;
+border-bottom:1px solid #000;
+cursor:pointer;
+text-decoration:none;
+color:#000;
+}
+
+.paper-buttons button:hover,
+.paper-buttons a:hover{
+opacity:.6;
+}
+
+.abstract{
+display:none;
+margin-top:15px;
+font-size:15px;
+color:#444;
+}
+
+/* SIDEBAR */
 
 .sidebar{
 flex:1;
@@ -170,38 +198,50 @@ Climate Risk · Agricultural Production · Insurance and Welfare
 </div>
 
 <p>
-I study how <strong>climate shocks propagate through agricultural production systems and affect household welfare</strong> in developing economies. My work examines the transmission of climatic volatility into crop yields and evaluates whether formal insurance mechanisms mitigate resulting income and consumption risk.
-</p>
-
-<p>
-Using district-level agricultural panels combined with high-resolution climate data, I estimate nonlinear yield responses across major crops. Building on this production-risk framework, I analyze selection into crop insurance and assess whether participation improves economic outcomes under climate stress.
+I study how <strong>climate shocks propagate through agricultural production systems and affect household welfare</strong> in developing economies.
 </p>
 
 <div class="section-divider"></div>
 
 <h2>Working Papers</h2>
 
-<div class="paper">
-<div class="paper-title">
-Climate Shocks and Agricultural Productivity
-</div>
-Estimates the impact of temperature and rainfall exposure on yields of soybean, maize, and paddy.
-<br><br>
-<a href="https://example.com/climate_yield_paper.pdf" target="_blank">Download Draft (PDF)</a>
+<div class="paper-card">
+<div class="paper-title">Climate Shocks and Agricultural Productivity</div>
+
+<div class="paper-buttons">
+<button onclick="toggleAbstract('abs1')">Read Abstract</button>
+<a href="#" target="_blank">Read Full Paper</a>
 </div>
 
-<div class="paper">
-<div class="paper-title">
-Insurance Participation under Production Risk
+<div class="abstract" id="abs1">
+This paper estimates nonlinear yield responses to temperature and rainfall exposure across major crops in Madhya Pradesh using district-level agricultural panel data. The analysis documents heterogeneous production responses to climatic variability and establishes the magnitude of climate-induced production risk.
 </div>
-Examines determinants of crop insurance uptake and extent of coverage.
 </div>
 
-<div class="paper">
-<div class="paper-title">
-Insurance and Welfare under Climate Stress
+<div class="paper-card">
+<div class="paper-title">Insurance Participation under Production Risk</div>
+
+<div class="paper-buttons">
+<button onclick="toggleAbstract('abs2')">Read Abstract</button>
+<a href="#" target="_blank">Read Full Paper</a>
 </div>
-Evaluates whether insurance participation improves farm income and consumption outcomes.
+
+<div class="abstract" id="abs2">
+This paper examines the determinants of crop insurance uptake and extent of coverage. It analyzes how farm characteristics and exposure to production risk shape participation in formal insurance mechanisms.
+</div>
+</div>
+
+<div class="paper-card">
+<div class="paper-title">Insurance and Welfare under Climate Stress</div>
+
+<div class="paper-buttons">
+<button onclick="toggleAbstract('abs3')">Read Abstract</button>
+<a href="#" target="_blank">Read Full Paper</a>
+</div>
+
+<div class="abstract" id="abs3">
+This paper evaluates whether insurance participation improves farm income and consumption outcomes. The analysis assesses whether formal risk-transfer mechanisms mitigate welfare losses associated with climatic shocks.
+</div>
 </div>
 
 <div class="section-divider"></div>
@@ -213,7 +253,7 @@ International Network for Economic Research (Italy)<br>
 Southeast Asia Economic Research and Development Conference (Cambodia)<br>
 Indian Society of Agricultural Economics (India)<br>
 International Conference on Agrarian Change (India)<br>
-Delhi School of Economics Winter School
+Delhi School of Economics Winter School (India)
 </p>
 
 <footer>
@@ -234,14 +274,13 @@ Delhi School of Economics Winter School
 
 <br>
 
-<p>Email:</p>
-<p><a href="mailto:your@email.com">Ashishc54321@gmail.com</a></p>
+<p><a href="mailto:Ashishc54321@gmail.com">Ashishc54321@gmail.com</a></p>
 
 <br>
 
-<p><a href="https://drive.google.com/file/d/your_cv_link_here/view" target="_blank">Curriculum Vitae</a></p>
+<p><a href="#">Curriculum Vitae</a></p>
 <p><a href="https://github.com/ashishchouhan3" target="_blank">GitHub</a></p>
-<p><a href="https://scholar.google.com/" target="_blank">Google Scholar</a></p>
+<p><a href="#">Google Scholar</a></p>
 <p><a href="https://www.linkedin.com/in/ashishchouhan3697" target="_blank">LinkedIn</a></p>
 
 </div>
@@ -249,6 +288,17 @@ Delhi School of Economics Winter School
 </div>
 
 </div>
+
+<script>
+function toggleAbstract(id){
+var x = document.getElementById(id);
+if (x.style.display === "none" || x.style.display === "") {
+x.style.display = "block";
+} else {
+x.style.display = "none";
+}
+}
+</script>
 
 </body>
 </html>
