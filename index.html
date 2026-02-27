@@ -18,12 +18,10 @@ line-height:1.8;
 }
 
 .container{
-max-width:900px;
+max-width:1000px;
 margin:auto;
 padding:80px 20px 120px 20px;
 }
-
-/* Navigation */
 
 nav{
 display:flex;
@@ -43,7 +41,18 @@ nav a:hover{
 opacity:.6;
 }
 
-/* Name */
+.layout{
+display:flex;
+gap:80px;
+}
+
+.main{
+flex:2;
+}
+
+.sidebar{
+flex:1;
+}
 
 h1{
 font-family:'Playfair Display',serif;
@@ -57,58 +66,46 @@ margin-bottom:40px;
 font-size:16px;
 }
 
-/* Research Statement */
-
 .research-statement{
 font-size:20px;
-margin-bottom:40px;
+margin-bottom:30px;
 }
 
 .research-statement strong{
 font-weight:500;
 }
 
-/* Sections */
-
-h2{
-font-family:'Playfair Display',serif;
-font-size:26px;
-margin-top:80px;
+.profile-card img{
+width:140px;
+height:140px;
+border-radius:50%;
+object-fit:cover;
 margin-bottom:20px;
 }
 
-.paper{
-margin-bottom:25px;
+.profile-card h3{
+margin:0 0 10px 0;
+font-size:18px;
 }
 
-.paper-title{
-font-weight:500;
-margin-bottom:5px;
-}
-
-.paper button,
-.paper a{
-background:none;
-border:none;
-border-bottom:1px solid #111;
-cursor:pointer;
+.profile-card p{
 font-size:14px;
+color:#555;
+margin:4px 0;
+}
+
+.profile-card a{
+display:inline-block;
 margin-right:15px;
+margin-top:10px;
 text-decoration:none;
 color:#111;
-padding:0;
+border-bottom:1px solid #111;
+font-size:14px;
 }
 
-.paper button:hover,
-.paper a:hover{
+.profile-card a:hover{
 opacity:.6;
-}
-
-.abstract{
-display:none;
-margin-top:10px;
-font-size:15px;
-color:#444;
 }
 
 footer{
@@ -117,18 +114,10 @@ font-size:14px;
 color:#777;
 }
 
-/* Contact links */
-
-.contact-links a{
-margin-right:20px;
-text-decoration:none;
-color:#111;
-border-bottom:1px solid #111;
-font-size:15px;
+@media(max-width:900px){
+.layout{
+flex-direction:column;
 }
-
-.contact-links a:hover{
-opacity:.6;
 }
 
 </style>
@@ -141,12 +130,16 @@ opacity:.6;
 <nav>
 <div><strong>Ashish Chouhan</strong></div>
 <div>
-<a href="#">Home</a>
-<a href="#research">Research</a>
-<a href="#">CV</a>
+<a href="index.html">Home</a>
+<a href="research.html">Research</a>
+<a href="cv.pdf" target="_blank">CV</a>
 <a href="#contact">Contact</a>
 </div>
 </nav>
+
+<div class="layout">
+
+<div class="main">
 
 <h1>Ashish Chouhan</h1>
 <div class="subtitle">
@@ -161,43 +154,31 @@ I study how <strong>climate shocks propagate through agricultural production sys
 Using district-level agricultural panels combined with high-resolution climate data, I estimate nonlinear yield responses across major crops. Building on this production-risk framework, I analyze selection into crop insurance and assess whether participation improves economic outcomes under climate stress.
 </div>
 
-<h2 id="research">Working Papers</h2>
-
-<div class="paper">
-<div class="paper-title">Climate Shocks and Agricultural Productivity</div>
-<button onclick="toggleAbstract('a1')">Abstract</button>
-<a href="#" target="_blank">Full Paper</a>
-<div class="abstract" id="a1">
-This paper estimates nonlinear yield responses to temperature and rainfall exposure across major crops in Madhya Pradesh using district-level agricultural panel data. The analysis documents heterogeneous production responses to climatic variability and establishes the magnitude of climate-induced production risk.
-</div>
 </div>
 
-<div class="paper">
-<div class="paper-title">Insurance Participation under Production Risk</div>
-<button onclick="toggleAbstract('a2')">Abstract</button>
-<a href="#" target="_blank">Full Paper</a>
-<div class="abstract" id="a2">
-This paper examines the determinants of crop insurance uptake and extent of coverage. It analyzes how farm characteristics and exposure to production risk shape participation in formal insurance mechanisms.
-</div>
-</div>
+<div class="sidebar">
 
-<div class="paper">
-<div class="paper-title">Insurance and Welfare under Climate Stress</div>
-<button onclick="toggleAbstract('a3')">Abstract</button>
-<a href="#" target="_blank">Full Paper</a>
-<div class="abstract" id="a3">
-This paper evaluates whether insurance participation improves farm income and consumption outcomes. The analysis assesses whether formal risk-transfer mechanisms mitigate welfare losses associated with climatic shocks.
-</div>
-</div>
+<div class="profile-card">
 
-<h2 id="contact">Contact</h2>
+<img src="profile.jpg" alt="Profile Photo">
 
-<div class="contact-links">
+<h3>Research Areas</h3>
+<p>Climate Economics</p>
+<p>Agricultural Risk</p>
+<p>Development Economics</p>
+
+<div id="contact">
 <a href="mailto:Ashishc54321@gmail.com">Email</a>
-<a href="#">Curriculum Vitae</a>
-<a href="https://scholar.google.com/" target="_blank">Google Scholar</a>
+<a href="cv.pdf" target="_blank">CV</a>
+<a href="https://scholar.google.com/" target="_blank">Scholar</a>
 <a href="https://github.com/ashishchouhan3" target="_blank">GitHub</a>
 <a href="https://www.linkedin.com/in/ashishchouhan3697" target="_blank">LinkedIn</a>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 <footer>
@@ -205,17 +186,6 @@ This paper evaluates whether insurance participation improves farm income and co
 </footer>
 
 </div>
-
-<script>
-function toggleAbstract(id){
-var x = document.getElementById(id);
-if (x.style.display === "none" || x.style.display === "") {
-x.style.display = "block";
-} else {
-x.style.display = "none";
-}
-}
-</script>
 
 </body>
 </html>
